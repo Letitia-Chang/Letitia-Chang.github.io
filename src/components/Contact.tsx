@@ -41,32 +41,36 @@ const links = [
 
 export default function Contact() {
   return (
-    <section id="contact" className="border-t border-line">
-      <div className="mx-auto max-w-6xl px-6 py-20 text-center md:py-28">
-        <p className="text-sm font-medium uppercase tracking-wider text-accent">Contact</p>
-        <h2 className="mx-auto mt-3 max-w-xl font-display text-3xl font-semibold tracking-tight text-ink sm:text-4xl">
-          Let's talk about how I can help your team
-        </h2>
-        <p className="mx-auto mt-4 max-w-lg text-base leading-relaxed text-slate">
-          Open to Data Scientist, ML Engineer, and Data Analyst roles. The fastest way to reach
-          me is email.
-        </p>
+    <section id="contact">
+      <div className="mx-auto max-w-6xl px-6 py-16 md:py-24">
+        <div className="rounded-3xl bg-ink px-6 py-14 text-center sm:px-12">
+          <p className="text-sm font-semibold uppercase tracking-wider text-indigo-300">
+            Contact
+          </p>
+          <h2 className="mx-auto mt-3 max-w-xl font-display text-3xl font-semibold tracking-tight text-white sm:text-4xl">
+            Let's talk about how I can help your team
+          </h2>
+          <p className="mx-auto mt-4 max-w-lg text-base leading-relaxed text-white/70">
+            Open to Data Scientist, AI/ML Engineer, and Data Analyst roles. The fastest way to
+            reach me is email.
+          </p>
 
-        <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
-          {links.map((link) => (
-            <a
-              key={link.label}
-              href={link.href}
-              target={link.label === 'Email' ? undefined : '_blank'}
-              rel={link.label === 'Email' ? undefined : 'noreferrer'}
-              className="inline-flex items-center gap-2.5 rounded-full border border-line-strong bg-paper px-5 py-3 text-sm font-medium text-ink transition-colors hover:border-ink"
-            >
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                {link.icon}
-              </svg>
-              {link.value}
-            </a>
-          ))}
+          <div className="mt-9 flex flex-wrap items-center justify-center gap-3">
+            {links.map((link) => (
+              <a
+                key={link.label}
+                href={link.href}
+                target={link.label === 'Email' ? undefined : '_blank'}
+                rel={link.label === 'Email' ? undefined : 'noreferrer'}
+                className="inline-flex items-center gap-2.5 rounded-full bg-white/10 px-5 py-3 text-sm font-medium text-white transition-colors hover:bg-white hover:text-ink"
+              >
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  {link.icon}
+                </svg>
+                {link.value}
+              </a>
+            ))}
+          </div>
         </div>
       </div>
     </section>

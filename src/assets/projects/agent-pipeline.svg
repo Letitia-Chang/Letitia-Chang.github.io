@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" role="img" aria-label="Eight-stage content generation pipeline">
+  <rect width="800" height="500" fill="#FFF1F4"/>
+  <g fill="none" stroke="#F3C6D3" stroke-width="2.5">
+    <path d="M148 96 h64"/>
+    <path d="M356 96 h64"/>
+    <path d="M568 96 c40 0 40 62 0 62 h-380 c-40 0 -40 62 0 62"/>
+    <path d="M336 220 h64"/>
+    <path d="M544 220 h64"/>
+    <path d="M672 244 c22 30 22 70 -18 92 h-100"/>
+    <path d="M406 336 h-64"/>
+  </g>
+  <g font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="19" font-weight="500">
+    <g>
+      <rect x="36" y="66" width="112" height="60" rx="14" fill="#FFFFFF" stroke="#F3C6D3" stroke-width="1.5"/>
+      <text x="92" y="103" text-anchor="middle" fill="#8D2B47">intake</text>
+    </g>
+    <g>
+      <rect x="212" y="66" width="144" height="60" rx="14" fill="#FFFFFF" stroke="#F3C6D3" stroke-width="1.5"/>
+      <text x="284" y="103" text-anchor="middle" fill="#8D2B47">normalize</text>
+    </g>
+    <g>
+      <rect x="420" y="66" width="148" height="60" rx="14" fill="#FFFFFF" stroke="#F3C6D3" stroke-width="1.5"/>
+      <text x="494" y="103" text-anchor="middle" fill="#8D2B47">strategize</text>
+    </g>
+    <g>
+      <rect x="188" y="190" width="148" height="60" rx="14" fill="#D6446F"/>
+      <text x="262" y="227" text-anchor="middle" fill="#FFFFFF">llm draft</text>
+    </g>
+    <g>
+      <rect x="400" y="190" width="144" height="60" rx="14" fill="#D6446F"/>
+      <text x="472" y="227" text-anchor="middle" fill="#FFFFFF">brand edit</text>
+    </g>
+    <g>
+      <rect x="608" y="190" width="152" height="60" rx="14" fill="#FFFFFF" stroke="#D6446F" stroke-width="2.5" stroke-dasharray="7 5"/>
+      <text x="684" y="219" text-anchor="middle" fill="#8D2B47">human</text>
+      <text x="684" y="241" text-anchor="middle" fill="#8D2B47">review</text>
+    </g>
+    <g>
+      <rect x="406" y="306" width="148" height="60" rx="14" fill="#FFFFFF" stroke="#F3C6D3" stroke-width="1.5"/>
+      <text x="480" y="343" text-anchor="middle" fill="#8D2B47">repurpose</text>
+    </g>
+    <g>
+      <rect x="216" y="306" width="126" height="60" rx="14" fill="#8D2B47"/>
+      <text x="279" y="343" text-anchor="middle" fill="#FFF1F4">publish</text>
+    </g>
+  </g>
+  <g font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="15" fill="#C48CA0">
+    <text x="36" y="436">claude api · supabase · structured state</text>
+    <text x="36" y="462">every stage a separate, testable call</text>
+  </g>
+</svg>
