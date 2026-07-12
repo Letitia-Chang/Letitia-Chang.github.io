@@ -6,10 +6,10 @@ export type SkillGroup = {
 export const skills: SkillGroup[] = [
   {
     category: 'Programming',
-    items: ['Python', 'SQL', 'JavaScript', 'TypeScript', 'PHP', 'C'],
+    items: ['Python', 'SQL', 'JavaScript', 'TypeScript', 'R', 'PHP'],
   },
   {
-    category: 'Data Science / ML',
+    category: 'Machine Learning',
     items: [
       'pandas',
       'NumPy',
@@ -23,15 +23,35 @@ export const skills: SkillGroup[] = [
     ],
   },
   {
-    category: 'Data Visualization / Analytics',
-    items: ['matplotlib', 'seaborn', 'Dashboards', 'EDA'],
+    category: 'LLM & AI Engineering',
+    items: [
+      'RAG',
+      'FAISS',
+      'Claude API',
+      'Prompt Design',
+      'Multi-step LLM Pipelines',
+      'LLM Evaluation',
+    ],
   },
   {
-    category: 'Web / Product',
-    items: ['React', 'Vue', 'Tailwind', 'APIs', 'UX Thinking', 'Product Requirements'],
+    category: 'Analytics & Visualization',
+    items: ['matplotlib', 'seaborn', 'Tableau', 'Dashboards', 'EDA', 'Metric Design'],
   },
   {
-    category: 'Tools',
-    items: ['GitHub', 'Jupyter', 'VS Code', 'Claude Code', 'Deployment Tools'],
+    category: 'Web & Deployment',
+    items: [
+      'FastAPI',
+      'React',
+      'Vue',
+      'Tailwind',
+      'PostgreSQL',
+      'Cloudflare Workers',
+      'Docker',
+      'AWS',
+    ],
+  },
+  {
+    category: 'Product & Tools',
+    items: ['GitHub', 'Jupyter', 'Claude Code', 'UX Thinking', 'Product Requirements'],
   },
 ]

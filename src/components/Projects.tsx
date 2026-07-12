@@ -13,8 +13,8 @@ export default function Projects() {
             Problems, approaches, and impact
           </h2>
           <p className="mt-4 text-base leading-relaxed text-slate">
-            Six projects spanning social impact, education technology, applied ML, and product
-            prototyping — each framed around the problem it solved, not just the tools used.
+            Deployed ML products, LLM pipelines, and decision-support tools — each framed
+            around the problem it solves, with live demos where you can try the real thing.
           </p>
         </div>
 

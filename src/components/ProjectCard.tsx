@@ -10,9 +10,17 @@ export default function ProjectCard({ project }: { project: Project }) {
   return (
     <article className="flex h-full flex-col rounded-2xl border border-line bg-paper p-6 transition-colors hover:border-line-strong sm:p-7">
       <div>
-        <p className="text-xs font-medium uppercase tracking-wider text-muted">
-          {project.subtitle}
-        </p>
+        <div className="flex flex-wrap items-center justify-between gap-2">
+          <p className="text-xs font-medium uppercase tracking-wider text-muted">
+            {project.subtitle}
+          </p>
+          {project.inProgress && (
+            <span className="inline-flex items-center gap-1.5 rounded-full bg-amber-50 px-2.5 py-1 text-xs font-medium text-amber-800">
+              <span className="h-1.5 w-1.5 rounded-full bg-amber-500" />
+              In progress
+            </span>
+          )}
+        </div>
         <h3 className="mt-1.5 font-display text-xl font-semibold leading-snug text-ink">
           {project.title}
         </h3>
@@ -66,7 +74,9 @@ export default function ProjectCard({ project }: { project: Project }) {
             ))}
           </div>
         ) : (
-          <p className="text-xs font-medium text-muted">Details available on request</p>
+          <p className="text-xs font-medium text-muted">
+            {project.inProgress ? 'Demo and repo coming soon' : 'Details available on request'}
+          </p>
         )}
       </div>
     </article>

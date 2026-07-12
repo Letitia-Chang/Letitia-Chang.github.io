@@ -1,15 +1,15 @@
 const pillars = [
   {
-    title: 'Data & ML',
-    body: 'Build interpretable models — from churn prediction to recommenders — grounded in EDA and evaluated against business cost, not just accuracy.',
+    title: 'Machine learning & AI',
+    body: 'Build and evaluate models end to end — segmentation, churn, purchase intent — plus modern LLM systems: RAG pipelines, multi-step agent workflows, and reproducible evaluation.',
+  },
+  {
+    title: 'Shipped, not just modeled',
+    body: 'My flagship projects are deployed with live demos — FastAPI backends, React frontends, Cloudflare and Railway deployments — because a model only matters once someone can use it.',
   },
   {
     title: 'Product thinking',
-    body: 'Years of product management and operations experience mean I scope problems, define requirements, and ship, instead of stopping at a notebook.',
-  },
-  {
-    title: 'Software engineering',
-    body: 'Comfortable across the stack — Python, SQL, React, APIs — so a model or analysis can become a working tool, not just a slide.',
+    body: 'Years of product management and operations experience mean I scope the business problem first, define what "good" looks like, and translate model output into decisions.',
   },
 ]
 
@@ -24,10 +24,11 @@ export default function About() {
           </h2>
           <p className="mt-6 text-base leading-relaxed text-slate sm:text-lg">
             I'm a second-year M.S. Analytics student at Georgia Tech, working toward Data
-            Scientist, ML Engineer, and Data Analyst roles. My background spans data science,
-            software engineering, product management, operations, and education technology —
-            which means I don't just build models, I connect them to the business problem,
-            the data pipeline, and the people who have to act on the output.
+            Scientist, AI/ML Engineer, and Data Analyst roles. My background spans data
+            science, software engineering, product management, operations, and education
+            technology — which means I don't stop at the notebook. I connect models to the
+            business problem, wrap them in APIs and interfaces, deploy them, and make the
+            output legible to the people who have to act on it.
           </p>
         </div>
 
