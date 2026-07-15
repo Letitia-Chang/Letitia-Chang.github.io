@@ -115,12 +115,13 @@ export const projects: Project[] = [
       approach:
         'Migration networks built from eBird density with an ALAN overlay, served from FastAPI + PostgreSQL with precomputed snapshots per species and year, rendered as an interactive map with tunable network parameters.',
       impact:
-        'Core backend, network computation, and interactive frontend working; tuning network construction and visual design.',
+        'Live interactive tool — four species, yearly network snapshots, and tunable construction parameters over an artificial-light overlay.',
     },
     tags: ['Python', 'FastAPI', 'PostgreSQL', 'React'],
+    demo: 'https://bird-migration-git-main-ting-ya.vercel.app/',
+    github: 'https://github.com/Letitia-Chang/bird_migration',
     size: 'small',
     accent: 'amber',
-    inProgress: true,
   },
   {
     slug: 'content-generation-agent',

@@ -53,7 +53,7 @@ export default function Hero() {
 
           <div className="grid grid-cols-2 gap-4 md:col-span-2 md:grid-cols-4">
             <div className="rounded-3xl bg-indigo-50 p-5">
-              <p className="font-display text-3xl font-semibold text-indigo-800">3</p>
+              <p className="font-display text-3xl font-semibold text-indigo-800">4</p>
               <p className="mt-1 text-xs font-medium leading-snug text-indigo-700">
                 live demos you can click right now
               </p>
