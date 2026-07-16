@@ -10,7 +10,7 @@ export default function Hero() {
             <div>
               <span className="inline-flex items-center gap-2 rounded-full bg-paper px-3.5 py-1.5 text-xs font-medium text-accent-hover">
                 <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-emerald-500" />
-                Open to Data Scientist / AI-ML Engineer / Data Analyst roles
+                Open to Data Scientist & AI/ML Engineer roles
               </span>
               <h1 className="mt-6 font-display text-4xl font-semibold leading-[1.05] tracking-tight text-ink sm:text-5xl lg:text-6xl">
                 Ting-Ya Chang

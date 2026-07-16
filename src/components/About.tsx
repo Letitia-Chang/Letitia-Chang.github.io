@@ -33,7 +33,7 @@ export default function About() {
           </h2>
           <p className="mt-6 text-base leading-relaxed text-slate">
             I'm a second-year M.S. Analytics student at Georgia Tech, working toward Data
-            Scientist, AI/ML Engineer, and Data Analyst roles. My background spans data
+            Scientist and AI/ML Engineer roles. My background spans data
             science, software engineering, product management, operations, and education
             technology — which means I don't stop at the notebook. I connect models to the
             business problem, wrap them in APIs and interfaces, deploy them, and make the
