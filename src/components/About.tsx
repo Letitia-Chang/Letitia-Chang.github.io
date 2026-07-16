@@ -12,21 +12,21 @@ type Pillar = {
 const pillars: Pillar[] = [
   {
     title: 'Machine learning & AI',
-    body: 'Designing, training, and validating predictive systems from end to end — including classic customer churn and purchase intent classification models alongside modern GenAI frameworks, custom RAG pipelines, and automated multi-step agent workflows.',
+    body: 'End-to-end predictive systems — churn and purchase-intent classification alongside GenAI: custom RAG pipelines and multi-step agent workflows.',
     icon: Brain,
     soft: 'bg-periwinkle-soft',
     deep: 'text-periwinkle-deep',
   },
   {
     title: 'Shipped, not just modeled',
-    body: 'Engineering the full deployment lifecycle. Moving models out of isolation and into production environments by building FastAPI backends, containerizing with Docker, and orchestrating live architectures across Cloudflare and Railway.',
+    body: 'The full deployment lifecycle — FastAPI backends, Docker containers, and live architectures on Cloudflare and Railway.',
     icon: Terminal,
     soft: 'bg-green-soft',
     deep: 'text-green-deep',
   },
   {
     title: 'Product strategy',
-    body: 'Years of technical product operation experience mean I map business goals to technical architectures. I treat engineering systems with strategic care — focusing on scalability, smooth workflows, and translating analytical outputs into high-leverage business outcomes.',
+    body: 'Mapping business goals to technical architecture — scalable systems and workflows that turn analytical output into business leverage.',
     icon: Layers,
     soft: 'bg-yellow-soft',
     deep: 'text-yellow-deep',
@@ -44,15 +44,12 @@ export default function About() {
             solutions.
           </h2>
           <p className="mt-6 text-base leading-relaxed text-slate">
-            I'm a second-year M.S. in Analytics student at Georgia Tech specializing in the
-            computational data track. My background spans data science, software engineering,
-            product development, business strategies, and operations. Over the last four
-            years, I've specialized in taking ambiguous business ideas and turning them into
-            real, deployed products, while transforming complex operational problems into
-            scalable workflows. Having managed a 30+ employee education startup and built
-            solutions across multiple fields — including healthcare, manufacturing, and
-            education — I combine robust technical engineering with sharp product and
-            business intuition to deliver measurable analytical impact.
+            Second-year M.S. Analytics student at Georgia Tech (computational data track). Over
+            the last four years I've turned ambiguous business ideas into deployed products and
+            messy operations into scalable workflows — including managing a 30+ person
+            education startup and building solutions across healthcare, manufacturing, and
+            education. I pair technical depth with product and business intuition to ship
+            measurable impact.
           </p>
         </div>
 
