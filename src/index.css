@@ -5,20 +5,72 @@
   --font-display: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
   --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
 
-  --color-ink: #111114;
-  --color-ink-soft: #3f4148;
-  --color-slate: #55575e;
-  --color-muted: #676a72;
-  --color-line: #e6e6ea;
-  --color-line-strong: #d5d5dc;
+  /* Base tones — cream / charcoal / taupe */
+  --color-ink: #262625;
+  --color-ink-soft: #4a463f;
+  --color-slate: #5c574d;
+  --color-muted: #6f675d;
+  --color-taupe: #c9bca9;
+  --color-line: #ece2d0;
+  --color-line-strong: #ddcfb6;
   --color-paper: #ffffff;
-  --color-canvas: #f8f8fb;
-  --color-panel: #f2f2f7;
+  --color-canvas: #faf1e4;
+  --color-panel: #f5ead8;
 
-  --color-accent: #4f46e5;
-  --color-accent-hover: #4338ca;
-  --color-accent-soft: #eef0fd;
-  --color-accent-line: #c7c9f6;
+  /* Primary accent — periwinkle (cool / informational) */
+  --color-accent: #4d5b7b;
+  --color-accent-hover: #3a4560;
+  --color-accent-soft: #cbd7f1;
+  --color-accent-line: #a9b8e4;
+
+  /* 12-color accent palette — base / soft (bg tint) / deep (AA text on soft) */
+  --color-terracotta: #d2603b;
+  --color-terracotta-soft: #ebb7a7;
+  --color-terracotta-deep: #7e3a23;
+
+  --color-peach: #e8ad84;
+  --color-peach-soft: #f5dac8;
+  --color-peach-deep: #745642;
+
+  --color-tan: #e0c39b;
+  --color-tan-soft: #f1e4d2;
+  --color-tan-deep: #70624e;
+
+  --color-yellow: #f9d368;
+  --color-yellow-soft: #fcebbb;
+  --color-yellow-deep: #705f2f;
+
+  --color-sage: #c5d1ae;
+  --color-sage-soft: #e5eadb;
+  --color-sage-deep: #626857;
+
+  --color-green: #7fa687;
+  --color-green-soft: #c5d7c9;
+  --color-green-deep: #465b4a;
+
+  --color-forest: #5c7a5c;
+  --color-forest-soft: #b6c3b6;
+  --color-forest-deep: #3c4f3c;
+
+  --color-bgreen: #8cbb8c;
+  --color-bgreen-soft: #cbe0cb;
+  --color-bgreen-deep: #4d674d;
+
+  --color-mint: #b7d3c4;
+  --color-mint-soft: #dfebe4;
+  --color-mint-deep: #5c6a62;
+
+  --color-teal: #6b9aa0;
+  --color-teal-soft: #bcd2d4;
+  --color-teal-deep: #405c60;
+
+  --color-periwinkle: #8ca6e0;
+  --color-periwinkle-soft: #cbd7f1;
+  --color-periwinkle-deep: #4d5b7b;
+
+  --color-pink: #eb9cb5;
+  --color-pink-soft: #f6d2de;
+  --color-pink-deep: #764e5a;
 }
 
 html {
@@ -28,7 +80,7 @@ html {
 
 body {
   margin: 0;
-  background: var(--color-paper);
+  background: var(--color-canvas);
   color: var(--color-ink-soft);
   font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;

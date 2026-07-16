@@ -1,8 +1,8 @@
 export const site = {
   name: 'Ting-Ya Chang',
-  role: 'Data Scientist & Applied ML Builder',
+  role: 'Data Scientist & Applied ML Engineer',
   positioning:
-    'I combine product thinking, software engineering, and machine learning to turn messy real-world problems into practical data products, interpretable models, and decision-support tools.',
+    'Applied ML Engineer and Data Scientist specializing in the intersection of predictive modeling, generative AI engineering, and technical product management. Experienced in steering early-stage startups from zero to production, building scalable automated workflows, and shipping data systems that drive operational decisions.',
   email: 'tingyachang97@gmail.com',
   github: 'https://github.com/Letitia-Chang',
   linkedin: 'https://www.linkedin.com/in/tingya-chang/',
