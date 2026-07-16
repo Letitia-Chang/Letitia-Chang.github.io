@@ -23,6 +23,9 @@
   --color-accent-soft: #cbd7f1;
   --color-accent-line: #a9b8e4;
 
+  /* Status — availability indicator (distinct from the decorative 12-color set) */
+  --color-available: #3fb27f;
+
   /* 12-color accent palette — base / soft (bg tint) / deep (AA text on soft) */
   --color-terracotta: #d2603b;
   --color-terracotta-soft: #ebb7a7;
