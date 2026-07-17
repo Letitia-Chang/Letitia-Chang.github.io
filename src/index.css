@@ -25,6 +25,8 @@
 
   /* Status — availability indicator (distinct from the decorative 12-color set) */
   --color-available: #3fb27f;
+  --color-available-soft: #a9dcc5;
+  --color-available-deep: #236246;
 
   /* 12-color accent palette — base / soft (bg tint) / deep (AA text on soft) */
   --color-terracotta: #d2603b;
