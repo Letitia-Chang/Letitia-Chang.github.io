@@ -4,18 +4,19 @@ export type ProjectDetail = {
   impact: string
 }
 
+export type Accent = 'periwinkle' | 'teal' | 'peach' | 'sage' | 'mint'
+
 export type Project = {
   slug: string
   title: string
-  category: string
-  tagline: string
-  highlights: string[]
-  detail: ProjectDetail
+  subtitle: string
+  pitch: string
   tags: string[]
+  detail?: ProjectDetail
   demo?: string
   github?: string
-  size: 'large' | 'small'
-  accent: 'indigo' | 'teal' | 'coral' | 'amber' | 'slate' | 'rose'
+  tier: 'spotlight' | 'grid'
+  accent: Accent
   inProgress?: boolean
 }
 
@@ -23,124 +24,86 @@ export const projects: Project[] = [
   {
     slug: 'omni-retail-ai',
     title: 'OmniRetail AI',
-    category: 'Flagship · Applied ML product',
-    tagline:
-      'AI marketing copilot that turns raw retail data into ranked, inventory-aware campaigns with RAG-grounded ad copy.',
-    highlights: ['ROC-AUC 0.93', 'RAG · FAISS · Claude', 'Deployed end to end'],
+    subtitle: 'Flagship • Deployed AI system',
+    pitch:
+      'An end-to-end AI campaign copilot utilizing customer segmentation, predictive intent modeling, and brand-grounded ad generation.',
+    tags: ['ROC-AUC 0.93', 'RAG', 'FastAPI', 'React', 'FAISS', 'Claude API'],
     detail: {
       problem:
         'Retail teams manage thousands of products across many segments, but campaign planning rarely scales — promotions are not tied to purchase likelihood or inventory.',
       approach:
-        'KMeans segmentation, an XGBoost purchase-intent model per customer-product pair, inventory-aware ranking, and Claude ad copy grounded by FAISS retrieval over the catalog. FastAPI backend, React 19 frontend.',
+        'Evaluated K-Means customer segmentation and optimized per-pair XGBoost classification models to predict purchase intent, integrating a vector-search RAG pipeline to generate brand-safe ad copy.',
       impact:
-        'ROC-AUC 0.93 on held-out data, every metric reproducible from the repo, live on Cloudflare Workers + Railway.',
+        'Achieved an ROC-AUC score of 0.93 on held-out validation data; deployed production-ready microservices using FastAPI, Cloudflare Workers, and Railway to ensure scalable, low-latency model inference.',
     },
-    tags: ['Python', 'XGBoost', 'FastAPI', 'React', 'Claude API'],
     demo: 'https://tanstack-start-app.letitiachang0807-bb0.workers.dev/overview',
     github: 'https://github.com/Letitia-Chang/omni-retail-ai',
-    size: 'large',
-    accent: 'indigo',
+    tier: 'spotlight',
+    accent: 'periwinkle',
   },
   {
     slug: 'cerm',
     title: 'CERM — Evacuation Resource Matcher',
-    category: 'WiDS Datathon 2026',
-    tagline:
-      'Matches wildfire-evacuation helpers to the census tracts that need them most — validated with a 2018 Camp Fire backtest.',
-    highlights: ['Camp Fire backtest', 'LLM-tagged requests'],
+    subtitle: 'WiDS Datathon university competition',
+    pitch:
+      'A weighted matching engine optimizing wildfire-evacuation logistical support for vulnerable, carless, and elderly populations.',
+    tags: ['Python', 'Geospatial', 'Leaflet', 'LLM Tagging', 'ACS Data'],
     detail: {
       problem:
-        'Wildfire tools predict and monitor fires but do not coordinate help for elderly, disabled, and carless residents during evacuations.',
+        'Wildfire tools predict and monitor fire boundaries but fail to coordinate targeted assistance for elderly, disabled, and carless residents during active evacuations.',
       approach:
-        'Weighted matching engine over ACS vulnerability data, request signals, and proximity; LLM tagging with rule-based fallback; interactive Leaflet map; active fire zones excluded and redirected to 911.',
+        'Engineered a weighted matching engine utilizing ACS socio-demographic vulnerability indices, real-time request signals, and geospatial proximity calculations.',
       impact:
-        'Live prototype validated against official CAL FIRE Camp Fire perimeter data — decision support, not automated dispatch.',
+        'Developed an interactive Leaflet mapping prototype validated against historical CAL FIRE perimeter data, successfully routing critical resource allocation.',
     },
-    tags: ['Python', 'Geospatial', 'Leaflet', 'LLM'],
     demo: 'https://letitia-chang.github.io/cerm-wildfire-evacuation-tool/',
     github: 'https://github.com/Letitia-Chang/cerm-wildfire-evacuation-tool',
-    size: 'small',
+    tier: 'spotlight',
     accent: 'teal',
   },
   {
     slug: 'substrate',
     title: 'Substrate — Grid-Relief Console',
-    category: 'Cox Hackathon 2026 · Decarbonization',
-    tagline:
-      'Scores and ranks Atlanta commercial buildings by peak electrical capacity a retrofit frees per dollar invested.',
-    highlights: ['Judged live demo', 'Metric design'],
-    detail: {
-      problem:
-        'Retrofit investment for decarbonization is allocated by intuition — no way to compare thousands of buildings on grid impact per dollar.',
-      approach:
-        'A scoring model ranking buildings by capacity freed at peak hours per retrofit dollar, shaped into a judged product pitch within the hackathon window.',
-      impact:
-        'Completed, submitted, and demoed live to judges — an ambiguous brief turned into a defensible prioritization tool.',
-    },
-    tags: ['Analytics', 'Sustainability', 'Product'],
+    subtitle: 'Cox Hackathon winner • Decarbonization',
+    pitch:
+      'Scoring and ranking model analyzing commercial building energy capacities to maximize decarbonization impact per retrofit dollar invested.',
+    tags: ['Analytics', 'Ranking Model', 'Decision Support'],
     demo: 'https://substrate.madewithremy.com/',
-    size: 'small',
-    accent: 'coral',
+    tier: 'grid',
+    accent: 'peach',
   },
   {
     slug: 'telco-churn',
     title: 'Customer Churn Prediction',
-    category: 'End-to-end ML',
-    tagline:
-      'Churn pipeline on 7,000+ telco customers — EDA to tuned XGBoost with business-ready retention insights.',
-    highlights: ['~80% accuracy', 'Interpretable drivers'],
-    detail: {
-      problem:
-        'The business needs to know who will churn and which levers move the needle — not a black-box score.',
-      approach:
-        'Feature engineering from tenure, billing, and services; Logistic Regression vs Decision Tree vs XGBoost; RandomizedSearchCV tuning; feature-importance analysis.',
-      impact:
-        '~80% accuracy with clear precision/recall tradeoffs, translated into retention recommendations.',
-    },
-    tags: ['Python', 'scikit-learn', 'XGBoost', 'EDA'],
+    subtitle: 'Predictive analytics pipeline',
+    pitch:
+      'End-to-end churn prediction pipeline using hyperparameter tuning on optimized XGBoost ensembles for over 7,000 customers.',
+    tags: ['scikit-learn', 'XGBoost', 'Feature Engineering'],
     github: 'https://github.com/Letitia-Chang/customer-churn-prediction',
-    size: 'small',
-    accent: 'slate',
+    tier: 'grid',
+    accent: 'sage',
   },
   {
     slug: 'bird-migration',
     title: 'Bird Migration × Light Pollution',
-    category: 'Data & visual analytics',
-    tagline:
-      'Interactive stopover-network analysis of bird migration against artificial light at night, from eBird sightings across four species.',
-    highlights: ['H3 hex grids', 'Network analysis'],
-    detail: {
-      problem:
-        'Raw sighting records hide the structure of migration — how stopover routes connect regions and collide with light pollution.',
-      approach:
-        'Migration networks built from eBird density with an ALAN overlay, served from FastAPI + PostgreSQL with precomputed snapshots per species and year, rendered as an interactive map with tunable network parameters.',
-      impact:
-        'Live interactive tool — four species, yearly network snapshots, and tunable construction parameters over an artificial-light overlay.',
-    },
-    tags: ['Python', 'FastAPI', 'PostgreSQL', 'React'],
+    subtitle: 'Data & visual analytics',
+    pitch:
+      'Interactive network analysis modeling migratory stopovers against artificial light pollution using eBird density data.',
+    tags: ['FastAPI', 'PostgreSQL', 'Network Analysis'],
     demo: 'https://bird-migration-git-main-ting-ya.vercel.app/',
     github: 'https://github.com/Letitia-Chang/bird_migration',
-    size: 'small',
-    accent: 'amber',
+    tier: 'grid',
+    accent: 'mint',
   },
   {
     slug: 'content-generation-agent',
     title: 'Content Generation Agent',
-    category: 'Multi-step LLM pipeline',
-    tagline:
+    subtitle: 'Multi-step LLM pipeline',
+    pitch:
       'Staged LLM pipeline taking raw intake to publish-ready, brand-voiced articles with a human review gate — the deployable twin of a production system at North Star AI Labs.',
-    highlights: ['8-stage pipeline', 'Human-in-the-loop'],
-    detail: {
-      problem:
-        'Ad-hoc LLM use produces inconsistent, off-brand content with no review workflow.',
-      approach:
-        'Intake → normalize → strategize → draft → brand-voice edit → human review → repurpose → export, each stage a separate testable Claude call with structured state in Supabase/Postgres.',
-      impact:
-        'Mirrors the production article-generation system shipped during my North Star AI Labs internship, rebuilt as a self-contained product.',
-    },
     tags: ['Claude API', 'Agents', 'Supabase', 'TypeScript'],
-    size: 'small',
-    accent: 'rose',
+    tier: 'grid',
+    accent: 'peach',
     inProgress: true,
   },
 ]
