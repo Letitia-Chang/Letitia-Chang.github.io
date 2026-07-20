@@ -11,10 +11,14 @@ export const skills: SkillGroup[] = [
   {
     category: 'Machine Learning',
     items: [
+      'PyTorch',
+      'TensorFlow',
       'pandas',
       'NumPy',
       'scikit-learn',
       'XGBoost',
+      'OpenCV',
+      'YOLO',
       'Regression',
       'Classification',
       'Clustering',
@@ -27,6 +31,7 @@ export const skills: SkillGroup[] = [
     items: [
       'RAG',
       'FAISS',
+      'LangGraph',
       'Claude API',
       'Prompt Design',
       'Multi-step LLM Pipelines',
