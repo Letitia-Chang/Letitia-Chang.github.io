@@ -9,18 +9,6 @@ export type Experience = {
 
 export const experience: Experience[] = [
   {
-    role: 'Agentic AI Research Intern',
-    org: 'Madabhushi Lab, Dept. of Radiology, Emory University School of Medicine',
-    location: 'Atlanta, GA',
-    period: 'July 2026 — Present',
-    current: true,
-    bullets: [
-      'Researching multimodal AI architectures for integrating heterogeneous biomedical data — pathology whole-slide images, MRI/CT scans, molecular data, and clinical records — toward unified patient-level representations.',
-      'Investigating how multimodal representations can condition hypothesis generation in SAGE, an agentic AI system, for patient-cohort- and dataset-specific reasoning.',
-      'Surveying multimodal foundation model literature (CLIP-based architectures, Gemini Embedding 2, and related embedding/fusion strategies) to inform modality alignment and evaluation design for the project.'
-    ],
-  },
-  {
     role: 'AI & Data Student Assistant',
     org: 'ATDC - North Star AI Labs',
     location: 'Atlanta, GA',
@@ -30,6 +18,18 @@ export const experience: Experience[] = [
       "Engineered a local multi-agent deep research system in Python (LangGraph, local LLM inference, SearxNG, DuckDuckGo) using a hierarchical Orchestrator → Searcher → Analyzer architecture with tool-call quotas to prevent runaway execution.",
       "Built a full-stack journalist outreach platform (React, TypeScript, Express, PostgreSQL) spanning automated discovery, profile enrichment, and personalized pitch generation grounded in each journalist's recent publication history — plus an NLP-based reply classifier that triages inbound responses by intent and notifies admins when action is needed.",
       "Developed an end-to-end RAG-based content generation pipeline that grounds drafts in live web research alongside intake forms and interview transcripts, then auto-publishes human-approved content directly to social media and the company website — removing manual posting from the workflow entirely.",
+    ],
+  },
+  {
+    role: 'Agentic AI Research Intern',
+    org: 'Madabhushi Lab, Dept. of Radiology, Emory University School of Medicine',
+    location: 'Atlanta, GA',
+    period: 'July 2026 — Present',
+    current: true,
+    bullets: [
+      'Researching multimodal AI architectures for integrating heterogeneous biomedical data — pathology whole-slide images, MRI/CT scans, molecular data, and clinical records — toward unified patient-level representations.',
+      'Investigating how multimodal representations can condition hypothesis generation in SAGE, an agentic AI system, for patient-cohort- and dataset-specific reasoning.',
+      'Surveying multimodal foundation model literature (CLIP-based architectures, Gemini Embedding 2, and related embedding/fusion strategies) to inform modality alignment and evaluation design for the project.'
     ],
   },
   {

@@ -9,8 +9,8 @@ const stats = [
     deep: 'text-periwinkle-deep',
   },
   {
-    value: '2 Target',
-    label: 'Education Startups Managed',
+    value: '2',
+    label: 'Education Products Shipped',
     soft: 'bg-peach-soft',
     deep: 'text-peach-deep',
   },
