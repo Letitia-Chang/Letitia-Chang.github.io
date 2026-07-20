@@ -52,11 +52,7 @@ export default function About() {
             strategies, and operations. Over the last four years, I've
             specialized in taking ambiguous business ideas and turning them into
             real, deployed products, while transforming complex operational
-            problems into scalable workflows. Having managed a 30+ employee
-            education startup and built solutions across multiple
-            fields—including healthcare, manufacturing, and education—I combine
-            robust technical engineering with sharp product and business
-            intuition to deliver measurable analytical impact.
+            problems into scalable workflows.
           </p>
         </div>
 

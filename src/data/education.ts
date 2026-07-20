@@ -28,6 +28,6 @@ export const education: Education[] = [
     location: 'Taipei, Taiwan',
     period: 'Sep 2015 — Jun 2020',
     coursework: [],
-    note: 'Foundation in cross-cultural communication and analytical writing — skills I now use to translate technical findings for non-technical stakeholders.',
+    note: 'Research assistant analyzing cross-strait translation style — comparing Traditional Chinese (Taiwan) and Simplified Chinese (China) renderings of Spanish literary works. Early training in structured comparative analysis I still rely on to make technical work legible across audiences.',
   },
 ]

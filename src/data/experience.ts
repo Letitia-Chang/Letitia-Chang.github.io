@@ -32,17 +32,6 @@ export const experience: Experience[] = [
       "Developed an end-to-end RAG-based content generation pipeline that grounds drafts in live web research alongside intake forms and interview transcripts, then auto-publishes human-approved content directly to social media and the company website — removing manual posting from the workflow entirely.",
     ],
   },
-  // {
-  //   role: 'Data Science Practicum — UPS Surface Network Planning',
-  //   org: 'UPS · Georgia Tech MSA Practicum',
-  //   location: 'Atlanta, GA',
-  //   period: 'May 2026 — Present',
-  //   current: true,
-  //   bullets: [
-  //     'Building a normalized Driver Schedule Consistency Score quantifying how consistent driver schedules are across a large surface transportation network, sponsored by UPS Operations Research.',
-  //     'Designed the scoring and normalization methodology and workload distribution analysis; presented the midterm readout to the UPS sponsor team.',
-  //   ],
-  // },
   {
     role: 'Data Scientist',
     org: 'OurScool Education Inc.',
