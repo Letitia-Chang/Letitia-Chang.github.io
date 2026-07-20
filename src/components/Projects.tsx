@@ -160,8 +160,6 @@ function Spotlight({ project, index }: { project: Project; index: number }) {
 function GridCard({ project }: { project: Project }) {
   const accent = accents[project.accent]
   const Icon = gridIcons[project.slug]
-  const primaryHref = project.github ?? project.demo
-  const linkLabel = project.github ? 'GitHub ↗' : 'Live demo ↗'
 
   return (
     <article className="flex flex-col rounded-3xl bg-paper p-6 shadow-sm ring-1 ring-line">
@@ -188,17 +186,28 @@ function GridCard({ project }: { project: Project }) {
         ))}
       </div>
 
-      <div className="mt-auto pt-5 text-sm font-medium">
-        {primaryHref ? (
+      <div className="mt-auto flex flex-wrap gap-4 pt-5 text-sm font-medium">
+        {project.demo && (
           <a
-            href={primaryHref}
+            href={project.demo}
             target="_blank"
             rel="noreferrer"
             className={`${accent.deep} underline-offset-4 hover:underline`}
           >
-            {linkLabel}
+            Live demo ↗
           </a>
-        ) : (
+        )}
+        {project.github && (
+          <a
+            href={project.github}
+            target="_blank"
+            rel="noreferrer"
+            className={`${accent.deep} underline-offset-4 hover:underline`}
+          >
+            GitHub ↗
+          </a>
+        )}
+        {!project.demo && !project.github && (
           <span className="text-xs font-medium text-muted">Demo and repo coming soon</span>
         )}
       </div>

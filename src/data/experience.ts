@@ -9,38 +9,51 @@ export type Experience = {
 
 export const experience: Experience[] = [
   {
-    role: 'AI & Data Student Assistant',
-    org: 'North Star AI Labs',
+    role: 'Agentic AI Research Intern',
+    org: 'Madabhushi Lab, Dept. of Radiology, Emory University School of Medicine',
     location: 'Atlanta, GA',
-    period: 'May 2026 — Present',
+    period: 'July 2026 — Present',
     current: true,
     bullets: [
-      'Shipped a three-workflow LLM article-generation pipeline (Google Apps Script + Claude API) converging form submissions, in-person interviews, and startup research into a single production master feed powering a published frontend.',
-      'Built the press and media outreach system: tiered journalist target lists from published coverage and AI-drafted outreach for tech reporters.',
-      'Led brand and design-system decisions for the company website and internal media dashboard.',
+      'Researching multimodal AI architectures for integrating heterogeneous biomedical data — pathology whole-slide images, MRI/CT scans, molecular data, and clinical records — toward unified patient-level representations.',
+      'Investigating how multimodal representations can condition hypothesis generation in SAGE, an agentic AI system, for patient-cohort- and dataset-specific reasoning.',
+      'Surveying multimodal foundation model literature (CLIP-based architectures, Gemini Embedding 2, and related embedding/fusion strategies) to inform modality alignment and evaluation design for the project.'
     ],
   },
   {
-    role: 'Data Science Practicum — UPS Surface Network Planning',
-    org: 'UPS · Georgia Tech MSA Practicum',
+    role: 'AI & Data Student Assistant',
+    org: 'ATDC - North Star AI Labs',
     location: 'Atlanta, GA',
     period: 'May 2026 — Present',
     current: true,
     bullets: [
-      'Building a normalized Driver Schedule Consistency Score quantifying how consistent driver schedules are across a large surface transportation network, sponsored by UPS Operations Research.',
-      'Designed the scoring and normalization methodology and workload distribution analysis; presented the midterm readout to the UPS sponsor team.',
+      "Engineered a local multi-agent deep research system in Python (LangGraph, local LLM inference, SearxNG, DuckDuckGo) using a hierarchical Orchestrator → Searcher → Analyzer architecture with tool-call quotas to prevent runaway execution.",
+      "Built a full-stack journalist outreach platform (React, TypeScript, Express, PostgreSQL) spanning automated discovery, profile enrichment, and personalized pitch generation grounded in each journalist's recent publication history — plus an NLP-based reply classifier that triages inbound responses by intent and notifies admins when action is needed.",
+      "Developed an end-to-end RAG-based content generation pipeline that grounds drafts in live web research alongside intake forms and interview transcripts, then auto-publishes human-approved content directly to social media and the company website — removing manual posting from the workflow entirely.",
     ],
   },
+  // {
+  //   role: 'Data Science Practicum — UPS Surface Network Planning',
+  //   org: 'UPS · Georgia Tech MSA Practicum',
+  //   location: 'Atlanta, GA',
+  //   period: 'May 2026 — Present',
+  //   current: true,
+  //   bullets: [
+  //     'Building a normalized Driver Schedule Consistency Score quantifying how consistent driver schedules are across a large surface transportation network, sponsored by UPS Operations Research.',
+  //     'Designed the scoring and normalization methodology and workload distribution analysis; presented the midterm readout to the UPS sponsor team.',
+  //   ],
+  // },
   {
     role: 'Data Scientist',
     org: 'OurScool Education Inc.',
     location: 'Taichung, Taiwan',
     period: 'Jan 2023 — Jan 2024',
     bullets: [
-      'Designed ETL and feature-engineering pipelines (Python, SQL) turning learning-platform and ERP/CRM data into model-ready inputs.',
-      'Built customer segmentation and churn models that improved user engagement by 12% and retention by 20%; designed a quiz recommendation system that helped secure NT$1M in government funding.',
-      'Shipped LLM-assisted support automation drafting response suggestions, cutting manual handling time by 25%.',
-      'Ran NLP analysis and A/B tests guiding product and UI decisions, driving a 15% increase in conversion; built Tableau dashboards for engagement, churn, and retention.',
+      'Developed ETL and feature-engineering pipelines (Python, SQL) transforming learning-platform and ERP/CRM data into model-ready inputs.',
+      'Built customer segmentation and churn prediction models (scikit-learn, XGBoost), improving user engagement 12% and retention 20%.',
+      'Implemented NLP pipelines and A/B testing to guide product/UI decisions, driving a 15% increase in conversion rates.',
+      'Designed a quiz recommendation system using ranking and collaborative filtering that secured NT$1M in government funding.',
+      'Shipped LLM-based automation for customer support workflows, cutting manual handling time 25%.'
     ],
   },
   {
@@ -49,9 +62,11 @@ export const experience: Experience[] = [
     location: 'Taichung, Taiwan',
     period: 'Jan 2022 — Jan 2023',
     bullets: [
-      'Architected a full-stack ERP system (React, MySQL, PHP) for orders, inventory, payments, and sales tracking — automating manual workflows and cutting processing time by 30%.',
-      'Built a full-featured Vue.js e-learning platform: course management, real-time messaging, social feeds, in-platform purchases, and a personalized quiz recommender with progress analytics.',
-      'Automated CI/CD on AWS and Docker, improving deployment reliability and reducing production errors by 12%.',
+      'Built a full-featured e-learning platform (Vue.js) including a personalized quiz recommendation engine with progress analytics, alongside course management, real-time messaging, and in-platform purchases.',
+      'Designed relational databases (MySQL) and backend APIs (PHP) for scalable storage, retrieval, and analytics/reporting integrations.',
+      'Automated CI/CD pipelines on AWS and Docker, improving deployment reliability and cutting production errors 12%.',
+      'Architected a full-stack ERP system (React.js, MySQL, PHP) from the ground up for orders, inventory, payments, and sales tracking, cutting processing time 30%.',
+      'Defined data requirements and KPIs with engineering and business teams to enable reliable reporting and analysis.'
     ],
   },
   {
@@ -60,9 +75,10 @@ export const experience: Experience[] = [
     location: 'Taipei, Taiwan',
     period: 'Jun 2021 — Dec 2021',
     bullets: [
-      'Built end-to-end ML pipelines (Python, scikit-learn) for risk prediction, churn modeling, and forecasting across healthcare, insurance, manufacturing, and education clients.',
-      'Implemented computer-vision models (OpenCV, YOLO) for breast-cancer classification on hospital ultrasound images, localizing lesions and flagging abnormal cases.',
-      'Built NLP pipelines (NLTK, web scraping, text classification) analyzing student sentiment and enrollment trends to inform recruitment strategy.',
+      'Implemented computer vision models (OpenCV, YOLO) for breast cancer classification on hospital ultrasound images, localizing lesions and distinguishing normal/abnormal cases.',
+      'Built end-to-end ML pipelines (Python, scikit-learn) for risk prediction, churn modeling, and performance forecasting across healthcare, insurance, manufacturing, and education domains.',
+      'Built NLP pipelines (NLTK, web scraping, text classification) analyzing student sentiment and enrollment trends across social media and education forums to inform recruitment strategy.',
+      'Processed large-scale datasets and productionized ML workflows using Selenium, Pandas, SQL, Docker, and Git.',
     ],
   },
 ]

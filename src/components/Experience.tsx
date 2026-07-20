@@ -1,16 +1,24 @@
-import { Newspaper, Truck, LineChart, Code2, Cpu } from 'lucide-react'
-import type { LucideIcon } from 'lucide-react'
-import { experience } from '../data/experience'
+import { Microscope, Newspaper, Truck, LineChart, Code2, Cpu } from "lucide-react";
+import type { LucideIcon } from "lucide-react";
+import { experience } from "../data/experience";
 
-const roleIcons: LucideIcon[] = [Newspaper, Truck, LineChart, Code2, Cpu]
+// Keyed by role so icons stay tied to job content regardless of list order.
+const roleIcons: Record<string, LucideIcon> = {
+  "Agentic AI Research Intern": Microscope,
+  "AI & Data Student Assistant": Newspaper,
+  "Data Science Practicum — UPS Surface Network Planning": Truck,
+  "Data Scientist": LineChart,
+  "Full-Stack Developer & Technical Project Manager": Code2,
+  "Junior Software Engineer": Cpu,
+};
 
 const accentCycle: { soft: string; deep: string }[] = [
-  { soft: 'bg-periwinkle-soft', deep: 'text-periwinkle-deep' },
-  { soft: 'bg-teal-soft', deep: 'text-teal-deep' },
-  { soft: 'bg-peach-soft', deep: 'text-peach-deep' },
-  { soft: 'bg-sage-soft', deep: 'text-sage-deep' },
-  { soft: 'bg-mint-soft', deep: 'text-mint-deep' },
-]
+  { soft: "bg-periwinkle-soft", deep: "text-periwinkle-deep" },
+  { soft: "bg-teal-soft", deep: "text-teal-deep" },
+  { soft: "bg-peach-soft", deep: "text-peach-deep" },
+  { soft: "bg-sage-soft", deep: "text-sage-deep" },
+  { soft: "bg-mint-soft", deep: "text-mint-deep" },
+];
 
 export default function Experience() {
   return (
@@ -27,14 +35,18 @@ export default function Experience() {
 
         <div className="relative mt-10 space-y-6 border-l border-line pl-8 sm:pl-10">
           {experience.map((job, index) => {
-            const Icon = roleIcons[index % roleIcons.length]
-            const accent = accentCycle[index % accentCycle.length]
+            const Icon = roleIcons[job.role] ?? Cpu;
+            const accent = accentCycle[index % accentCycle.length];
             return (
               <div key={`${job.org}-${job.role}`} className="relative">
                 <div
                   className={`absolute -left-[47px] top-6 flex h-8 w-8 items-center justify-center rounded-full sm:-left-[55px] ${accent.soft}`}
                 >
-                  <Icon className={`h-4 w-4 ${accent.deep}`} strokeWidth={1.75} aria-hidden="true" />
+                  <Icon
+                    className={`h-4 w-4 ${accent.deep}`}
+                    strokeWidth={1.75}
+                    aria-hidden="true"
+                  />
                 </div>
 
                 <div className="rounded-3xl bg-paper p-6 shadow-sm ring-1 ring-line sm:p-7">
@@ -50,7 +62,9 @@ export default function Experience() {
                         </span>
                       )}
                     </div>
-                    <span className="text-sm font-medium text-muted">{job.period}</span>
+                    <span className="text-sm font-medium text-muted">
+                      {job.period}
+                    </span>
                   </div>
                   <p className={`mt-0.5 text-sm font-medium ${accent.deep}`}>
                     {job.org} · {job.location}
@@ -69,10 +83,10 @@ export default function Experience() {
                   </ul>
                 </div>
               </div>
-            )
+            );
           })}
         </div>
       </div>
     </section>
-  )
+  );
 }

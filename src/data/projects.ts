@@ -64,7 +64,7 @@ export const projects: Project[] = [
   {
     slug: 'substrate',
     title: 'Substrate — Grid-Relief Console',
-    subtitle: 'Cox Hackathon winner • Decarbonization',
+    subtitle: 'Cox Hackathon • Decarbonization',
     pitch:
       'Scoring and ranking model analyzing commercial building energy capacities to maximize decarbonization impact per retrofit dollar invested.',
     tags: ['Analytics', 'Ranking Model', 'Decision Support'],
