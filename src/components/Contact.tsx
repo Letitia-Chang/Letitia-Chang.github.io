@@ -51,8 +51,9 @@ export default function Contact() {
             Let's talk about how I can help your team
           </h2>
           <p className="mx-auto mt-4 max-w-lg text-base leading-relaxed text-white/70">
-            Open to Data Scientist and AI/ML Engineer roles. The fastest way to reach me is
-            email.
+            Open to Data Scientist and AI/ML Engineer roles.
+            <br />
+            The fastest way to reach me is email.
           </p>
 
           <div className="mt-9 flex flex-wrap items-center justify-center gap-3">
