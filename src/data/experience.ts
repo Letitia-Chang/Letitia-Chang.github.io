@@ -27,8 +27,8 @@ export const experience: Experience[] = [
     period: 'July 2026 — Present',
     current: true,
     bullets: [
-      'Researching multimodal AI architectures for integrating heterogeneous biomedical data — pathology whole-slide images, MRI/CT scans, molecular data, and clinical records — toward unified patient-level representations.',
-      'Investigating how multimodal representations can condition hypothesis generation in SAGE, an agentic AI system, for patient-cohort- and dataset-specific reasoning.',
+      'Designing multimodal AI architectures to integrate heterogeneous biomedical data — pathology whole-slide images, MRI/CT scans, molecular data, and clinical records — into unified patient-level representations.',
+      'Contributing to SAGE, an agentic AI system, by evaluating how multimodal representations condition its hypothesis generation for patient-cohort- and dataset-specific reasoning.',
       'Surveying multimodal foundation model literature (CLIP-based architectures, Gemini Embedding 2, and related embedding/fusion strategies) to inform modality alignment and evaluation design for the project.'
     ],
   },
