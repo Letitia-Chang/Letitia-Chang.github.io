@@ -5,7 +5,7 @@ import { experience } from "../data/experience";
 // Keyed by role so icons stay tied to job content regardless of list order.
 const roleIcons: Record<string, LucideIcon> = {
   "Agentic AI Research Intern": Microscope,
-  "AI & Data Student Assistant": Newspaper,
+  "AI Engineering Intern": Newspaper,
   "Data Science Practicum — UPS Surface Network Planning": Truck,
   "Data Scientist": LineChart,
   "Full-Stack Developer & Technical Project Manager": Code2,

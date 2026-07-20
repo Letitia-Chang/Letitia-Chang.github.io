@@ -9,7 +9,7 @@ export type Experience = {
 
 export const experience: Experience[] = [
   {
-    role: 'AI & Data Student Assistant',
+    role: 'AI Engineering Intern',
     org: 'ATDC - North Star AI Labs',
     location: 'Atlanta, GA',
     period: 'May 2026 — Present',
