@@ -10,7 +10,7 @@ const stats = [
   },
   {
     value: '2',
-    label: 'Education Products Shipped',
+    label: 'Education Startups Led',
     soft: 'bg-peach-soft',
     deep: 'text-peach-deep',
   },
