@@ -6,5 +6,5 @@ export const site = {
   email: 'tingyachang97@gmail.com',
   github: 'https://github.com/Letitia-Chang',
   linkedin: 'https://www.linkedin.com/in/tingya-chang/',
-  resumeHref: '/resume/Tingya-Chang-Resume.pdf',
+  resumeHref: '/resume/Ting-Ya_Chang_Resume.pdf',
 }
