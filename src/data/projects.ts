@@ -24,17 +24,17 @@ export const projects: Project[] = [
   {
     slug: 'omni-retail-ai',
     title: 'OmniRetail AI',
-    subtitle: 'Flagship • Deployed AI system',
+    subtitle: 'Flagship • GenAI + ML system',
     pitch:
-      'An end-to-end AI campaign copilot utilizing customer segmentation, predictive intent modeling, and brand-grounded ad generation.',
-    tags: ['ROC-AUC 0.93', 'RAG', 'FastAPI', 'React', 'FAISS', 'Claude API'],
+      'An end-to-end AI campaign copilot that tags products, predicts purchase intent across 300K+ customers, prioritizes promotions against inventory, and writes brand-grounded ad copy.',
+    tags: ['ROC-AUC 0.93', 'RAG', 'XGBoost', 'MobileNetV2', 'DeepSeek LLM', 'FastAPI'],
     detail: {
       problem:
         'Retail teams manage thousands of products across many segments, but campaign planning rarely scales — promotions are not tied to purchase likelihood or inventory.',
       approach:
-        'Evaluated K-Means customer segmentation and optimized per-pair XGBoost classification models to predict purchase intent, integrating a vector-search RAG pipeline to generate brand-safe ad copy.',
+        'Enriched the catalog with MobileNetV2 image tagging and DeepSeek LLM attributes, segmented customers with K-Means, and trained an XGBoost classifier to predict purchase intent per customer-product pair. Campaigns are ranked by purchase probability, inventory, and segment fit, and ad copy is grounded in the catalog through RAG.',
       impact:
-        'Achieved an ROC-AUC score of 0.93 on held-out validation data; deployed production-ready microservices using FastAPI, Cloudflare Workers, and Railway to ensure scalable, low-latency model inference.',
+        'ROC-AUC 0.93 on a held-out test set. Purchase-intent training pairs and inventory levels are synthetic, not real clickstream or inventory data, so the score validates the pipeline rather than live performance. Live demo deployed on Cloudflare Workers.',
     },
     demo: 'https://tanstack-start-app.letitiachang0807-bb0.workers.dev/overview',
     github: 'https://github.com/Letitia-Chang/omni-retail-ai',
@@ -42,46 +42,46 @@ export const projects: Project[] = [
     accent: 'periwinkle',
   },
   {
-    slug: 'cerm',
-    title: 'CERM — Evacuation Resource Matcher',
-    subtitle: 'WiDS Datathon university competition',
+    slug: 'knowing-doing-gap',
+    title: 'Measuring the Knowing-Doing Gap in LLM Tool Use',
+    subtitle: 'Agent evaluation • Behavioral study',
     pitch:
-      'A weighted matching engine optimizing wildfire-evacuation logistical support for vulnerable, carless, and elderly populations.',
-    tags: ['Python', 'Geospatial', 'Leaflet', 'LLM Tagging', 'ACS Data'],
+      'Does an LLM call tools when it actually needs them? A behavioral study building on Cheng et al. (arXiv:2605.14038), run on Qwen2.5-7B-Instruct.',
+    tags: ['Qwen2.5-7B', 'Tool Calling', 'LLM Evaluation', 'TogetherAI', 'Python'],
     detail: {
       problem:
-        'Wildfire tools predict and monitor fire boundaries but fail to coordinate targeted assistance for elderly, disabled, and carless residents during active evacuations.',
+        'Agents act on what a model does, not what it knows. A model that calls tools it doesn’t need wastes time and money; one that skips tools it does need gets answers wrong.',
       approach:
-        'Engineered a weighted matching engine utilizing ACS socio-demographic vulnerability indices, real-time request signals, and geospatial proximity calculations.',
+        'Built a five-stage pipeline over 30 curated questions (15 arithmetic, 15 factual): 10 no-tool runs per question to label whether the model truly needs a tool, a confidence probe for what it believes, and an agentic probe for what it actually does.',
       impact:
-        'Developed an interactive Leaflet mapping prototype validated against historical CAL FIRE perimeter data, successfully routing critical resource allocation.',
+        'Found a 50% mismatch between need and action, all from tool over-use (tools called on 28 of 30 questions). A one-line prompt intervention cut the mismatch to 27%, at the cost of two questions flipping into tool under-use.',
     },
-    demo: 'https://letitia-chang.github.io/cerm-wildfire-evacuation-tool/',
-    github: 'https://github.com/Letitia-Chang/cerm-wildfire-evacuation-tool',
+    github: 'https://github.com/Letitia-Chang/knowing-doing-gap',
     tier: 'spotlight',
     accent: 'teal',
   },
   {
-    slug: 'substrate',
-    title: 'Substrate — Grid-Relief Console',
-    subtitle: 'Cox Hackathon • Decarbonization',
+    slug: 'buzz-teammate-access',
+    title: 'Buzz Teammate Access',
+    subtitle: 'Buzz plugin • Shared AI agents',
     pitch:
-      'Scoring and ranking model analyzing commercial building energy capacities to maximize decarbonization impact per retrofit dollar invested.',
-    tags: ['Analytics', 'Ranking Model', 'Decision Support'],
-    demo: 'https://substrate.madewithremy.com/',
-    tier: 'grid',
-    accent: 'peach',
-  },
-  {
-    slug: 'telco-churn',
-    title: 'Customer Churn Prediction',
-    subtitle: 'Predictive analytics pipeline',
-    pitch:
-      'End-to-end churn prediction pipeline using hyperparameter tuning on optimized XGBoost ensembles for over 7,000 customers.',
-    tags: ['scikit-learn', 'XGBoost', 'Feature Engineering'],
-    github: 'https://github.com/Letitia-Chang/customer-churn-prediction',
+      'Buzz agents normally answer only their owner. This plugin lets approved teammates @mention shared agents in chosen channels, with per-person and per-agent rate limits and standing refusals for secrets, deletions, and code pushes.',
+    tags: ['JavaScript', 'AI Agents', 'Access Control'],
+    github: 'https://github.com/Letitia-Chang/buzz-teammate-access',
     tier: 'grid',
     accent: 'sage',
+  },
+  {
+    slug: 'cerm',
+    title: 'CERM — Evacuation Resource Matcher',
+    subtitle: 'WiDS Datathon university competition',
+    pitch:
+      'A weighted matching engine routing wildfire-evacuation support to vulnerable, carless, and elderly residents, validated against historical CAL FIRE perimeters.',
+    tags: ['Python', 'Geospatial', 'Leaflet', 'ACS Data'],
+    demo: 'https://letitia-chang.github.io/cerm-wildfire-evacuation-tool/',
+    github: 'https://github.com/Letitia-Chang/cerm-wildfire-evacuation-tool',
+    tier: 'grid',
+    accent: 'peach',
   },
   {
     slug: 'bird-migration',

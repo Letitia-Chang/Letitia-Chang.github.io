@@ -3,33 +3,51 @@ export type Experience = {
   org: string
   location: string
   period: string
+  type?: string
   current?: boolean
+  summary?: string
   bullets: string[]
 }
 
+// Titles, dates, and bullets mirror LinkedIn; the contract role and part-time labels come from the resumes.
 export const experience: Experience[] = [
   {
     role: 'AI Engineering Intern',
     org: 'ATDC - North Star AI Labs',
     location: 'Atlanta, GA',
     period: 'May 2026 — Present',
+    type: 'Part-time',
     current: true,
     bullets: [
-      "Engineered a local multi-agent deep research system in Python (LangGraph, local LLM inference, SearxNG, DuckDuckGo) using a hierarchical Orchestrator → Searcher → Analyzer architecture with tool-call quotas to prevent runaway execution.",
-      "Built a full-stack journalist outreach platform (React, TypeScript, Express, PostgreSQL) spanning automated discovery, profile enrichment, and personalized pitch generation grounded in each journalist's recent publication history — plus an NLP-based reply classifier that triages inbound responses by intent and notifies admins when action is needed.",
-      "Developed an end-to-end RAG-based content generation pipeline that grounds drafts in live web research alongside intake forms and interview transcripts, then auto-publishes human-approved content directly to social media and the company website — removing manual posting from the workflow entirely.",
+      'Built and deployed City Bot, a RAG assistant in the Buzz team chat that answers Georgia founders’ licensing and registration questions from 234 government documents, citing an official source at every step (local Qwen3-14B, pgvector). Scored 38/38 on a regression suite and ~89% top-3 on a labeled retrieval set.',
+      'Cut City Bot’s answer time from 40–180s to 6–13s by replacing a runaway LLM-driven tool loop (~48 calls) with a fixed pipeline. Chose Qwen3-14B over 27B for half the GPU memory and ~2x speed.',
+      'Built a multi-agent research system (LangGraph, SearXNG; Orchestrator → Searcher → Analyzer) with quota-guarded execution and a deterministic verifier that traces every claim to source text; 98.3% of claims matched exactly (226/230).',
+      'Built a journalist outreach platform with the lab’s outreach team (React, TypeScript, Express, PostgreSQL): profiles 300+ journalists, drafts Claude-generated pitches and routes replies with an LLM classifier. Opened 15+ journalist conversations.',
     ],
   },
   {
     role: 'Agentic AI Research Intern',
     org: 'Madabhushi Lab, Dept. of Radiology, Emory University School of Medicine',
     location: 'Atlanta, GA',
-    period: 'July 2026 — Present',
+    period: 'Jul 2026 — Present',
+    type: 'Part-time',
     current: true,
+    summary:
+      'Building the multimodal layer for SAGE, an LLM agent that generates and evaluates biomedical hypotheses.',
     bullets: [
-      'Designing multimodal AI architectures to integrate heterogeneous biomedical data — pathology whole-slide images, MRI/CT scans, molecular data, and clinical records — into unified patient-level representations.',
-      'Contributing to SAGE, an agentic AI system, by evaluating how multimodal representations condition its hypothesis generation for patient-cohort- and dataset-specific reasoning.',
-      'Surveying multimodal foundation model literature (CLIP-based architectures, Gemini Embedding 2, and related embedding/fusion strategies) to inform modality alignment and evaluation design for the project.'
+      'Built a multimodal data pipeline for 411 TCGA bladder cancer patients across 9 data types, including 457 whole-slide images. Caught a legacy tiling tool silently reading slides at ~2.5x instead of 20x and removed it.',
+      'Developed contrastive alignment (symmetric InfoNCE) linking slides, multi-omics and clinical text, reaching retrieval up to 16x better than random chance. 30 of 31 missing-modality combinations kept usable signal without retraining.',
+    ],
+  },
+  {
+    role: 'Contract Consultant & Instructor',
+    org: 'OurScool Education Inc.',
+    location: 'Taichung, Taiwan',
+    period: 'Jan 2024 — Aug 2025',
+    type: 'Part-time',
+    bullets: [
+      'Taught Python and full-stack web development to 150+ students, averaging a 4.95/5 rating.',
+      'Led publication of 2 in-house textbook series (TOEIC, Japanese) and launched 15+ non-language skills courses, such as Python and Photoshop.',
     ],
   },
   {
@@ -38,24 +56,23 @@ export const experience: Experience[] = [
     location: 'Taichung, Taiwan',
     period: 'Jan 2023 — Jan 2024',
     bullets: [
-      'Developed ETL and feature-engineering pipelines (Python, SQL) transforming learning-platform and ERP/CRM data into model-ready inputs.',
-      'Built customer segmentation and churn prediction models (scikit-learn, XGBoost), improving user engagement 12% and retention 20%.',
-      'Implemented NLP pipelines and A/B testing to guide product/UI decisions, driving a 15% increase in conversion rates.',
-      'Designed a quiz recommendation system using ranking and collaborative filtering that secured NT$1M in government funding.',
-      'Shipped LLM-based automation for customer support workflows, cutting manual handling time 25%.'
+      'Developed churn models (logistic regression, XGBoost) for 3 lifecycle stages and K-means segmentation of ~7,500 students. Validated an onboarding intervention in a randomized holdout, lifting 7-day retention by 8 percentage points.',
+      'Built an in-house A/B testing pipeline (PostgreSQL, AWS Lambda/EC2) with hash-based bucketing and SRM checks. Outreach-message tests cut late payments by 5% and raised class registration by 6%.',
+      'Designed a personalized quiz recommender (matrix factorization / collaborative filtering) with a guessing-floor correction and cold-start handling, securing NT$1M (about $31K USD) in government funding.',
+      'Built ETL pipelines (Python, SQL) and Tableau dashboards on behavioral event data, used to decide which courses to keep or launch and when to send outreach.',
+      'Managed 15+ people across marketing, UI/UX, engineering, support and curriculum; set annual goals and pricing.',
     ],
   },
   {
-    role: 'Full-Stack Developer & Technical Project Manager',
+    role: 'Software Engineer & Technical Product Manager',
     org: 'OurScool Education Inc.',
     location: 'Taichung, Taiwan',
     period: 'Jan 2022 — Jan 2023',
     bullets: [
-      'Built a full-featured e-learning platform (Vue.js) including a personalized quiz recommendation engine with progress analytics, alongside course management, real-time messaging, and in-platform purchases.',
-      'Designed relational databases (MySQL) and backend APIs (PHP) for scalable storage, retrieval, and analytics/reporting integrations.',
-      'Automated CI/CD pipelines on AWS and Docker, improving deployment reliability and cutting production errors 12%.',
-      'Architected a full-stack ERP system (React.js, MySQL, PHP) from the ground up for orders, inventory, payments, and sales tracking, cutting processing time 30%.',
-      'Defined data requirements and KPIs with engineering and business teams to enable reliable reporting and analysis.'
+      'Led discovery across 6 departments to scope an internal ERP, then architected, deployed and trained staff on it (React, PHP, MySQL, integrated CRM), automating order processing, sales tracking and inventory forecasting and cutting admin time 15%.',
+      'Designed and deployed (AWS, Docker) a bank-API-integrated payment-tracking system that matches incoming payments to individual students, with a live status dashboard and staged automated reminders.',
+      'Built event tracking for 10+ learner behaviors (logins, session time, post engagement, attendance, quizzes) on a platform used by 7,500+ college students, creating the data behind later churn, segmentation and dashboard work.',
+      'Maintained and extended the learning platform (Vue.js, PHP, MySQL), shipping features from course registration and material downloads to instructor messaging, progress tracking and daily quizzes.',
     ],
   },
   {
@@ -64,10 +81,10 @@ export const experience: Experience[] = [
     location: 'Taipei, Taiwan',
     period: 'Jun 2021 — Dec 2021',
     bullets: [
-      'Implemented computer vision models (OpenCV, YOLO) for breast cancer classification on hospital ultrasound images, localizing lesions and distinguishing normal/abnormal cases.',
-      'Built end-to-end ML pipelines (Python, scikit-learn) for risk prediction, churn modeling, and performance forecasting across healthcare, insurance, manufacturing, and education domains.',
-      'Built NLP pipelines (NLTK, web scraping, text classification) analyzing student sentiment and enrollment trends across social media and education forums to inform recruitment strategy.',
-      'Processed large-scale datasets and productionized ML workflows using Selenium, Pandas, SQL, Docker, and Git.',
+      'Designed a two-phase computer vision pipeline (ResNet-101 two-stage detector → YOLO-style single-stage detector) for ultrasound breast cancer screening, achieving 88% sensitivity across 3 BI-RADS risk tiers.',
+      'Led product demos of learning tools, including a speech-practice platform, MentorAI, and a vocabulary quiz system, to 20+ Taiwanese universities, managing client relationships and securing 5-year contracts with over half.',
+      'Delivered custom AI solutions for enterprise clients end to end, from scoping through build, testing, onboarding and training: owned an insurer’s policy-cancellation and sales-performance models, delivered a scheduling/dispatch tool for a landscaping company, and contributed to a manufacturing anomaly-detection tool.',
+      'Built a speech-practice platform (Azure Speech, MediaPipe) used by instructors and 300+ students per semester.',
     ],
   },
 ]

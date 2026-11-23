@@ -1,8 +1,8 @@
 export const site = {
   name: 'Ting-Ya Chang',
-  role: 'Data Scientist & Applied ML Engineer',
+  role: 'Applied AI Engineer · Forward Deployed',
   positioning:
-    'Applied ML Engineer and Data Scientist specializing in the intersection of predictive modeling, generative AI engineering, and technical product management. Experienced in steering early-stage startups from zero to production, building scalable automated workflows, and shipping data systems that drive operational decisions.',
+    'I build AI agents and RAG systems and take them from the customer conversation to production, with evaluation built in. Three years working directly with customers across an AI startup in Taipei, an edtech startup serving 7,500+ college students, and now ATDC’s North Star AI Labs.',
   email: 'tingyachang97@gmail.com',
   github: 'https://github.com/Letitia-Chang',
   linkedin: 'https://www.linkedin.com/in/tingya-chang/',

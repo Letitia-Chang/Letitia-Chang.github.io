@@ -11,22 +11,22 @@ type Pillar = {
 
 const pillars: Pillar[] = [
   {
-    title: "Machine learning & AI",
-    body: "End-to-end predictive systems — churn and purchase-intent classification alongside GenAI: custom RAG pipelines and multi-step agent workflows.",
+    title: "Agents & RAG, evaluated",
+    body: "RAG assistants and multi-agent systems with the evaluation built in: regression suites, labeled retrieval sets, and verifiers that trace every claim to its source.",
     icon: Brain,
     soft: "bg-periwinkle-soft",
     deep: "text-periwinkle-deep",
   },
   {
     title: "Shipped, not just modeled",
-    body: "The full deployment lifecycle — FastAPI backends, Docker containers, and live architectures on Cloudflare and Railway.",
+    body: "From discovery to deployment: an ERP scoped across 6 departments, a payment-tracking system on AWS, and a RAG assistant running in a team chat.",
     icon: Terminal,
     soft: "bg-green-soft",
     deep: "text-green-deep",
   },
   {
     title: "Product design",
-    body: "Mapping business goals to technical architecture — scalable systems and workflows that turn analytical output into business leverage.",
+    body: "Customer discovery, demos, and staff training: scoping what people actually need before building, then making sure they can use it.",
     icon: Layers,
     soft: "bg-yellow-soft",
     deep: "text-yellow-deep",
@@ -42,17 +42,19 @@ export default function About() {
             About
           </p>
           <h2 className="mt-3 font-display text-3xl font-semibold tracking-tight text-ink sm:text-4xl">
-            Turning complex business ideas and operational challenges into real,
-            deployed solutions.
+            Start with the simplest thing that works, and earn the complex
+            version.
           </h2>
           <p className="mt-6 text-base leading-relaxed text-slate">
-            I'm a second-year M.S. in Analytics student at Georgia Tech
-            specializing in the computational data track. My background spans
-            data science, software engineering, product development, business
-            strategies, and operations. Over the last four years, I've
-            specialized in taking ambiguous business ideas and turning them into
-            real, deployed products, while transforming complex operational
-            problems into scalable workflows.
+            I came into engineering through a side door: a degree in European
+            languages, code I taught myself, and a first job at a small AI
+            startup in Taipei, building custom AI for enterprise clients and
+            running product demos for universities. At an edtech startup serving
+            7,500+ college students, I was a software engineer, then a product
+            manager, then a data scientist. Now I'm finishing an M.S. in
+            Analytics at Georgia Tech and building AI agents at ATDC's North Star
+            AI Labs. I want to work close to the people using what I build, and
+            stay until it works.
           </p>
         </div>
 

@@ -1,12 +1,13 @@
 import { skills } from '../data/skills'
 
+// Keyed by category name in data/skills.ts — rename both together.
 const categoryTints: Record<string, { chip: string; dot: string }> = {
-  Programming: { chip: 'bg-slate-100 text-slate-800', dot: 'bg-slate-500' },
-  'Machine Learning': { chip: 'bg-indigo-50 text-indigo-900', dot: 'bg-indigo-500' },
-  'LLM & AI Engineering': { chip: 'bg-rose-50 text-rose-900', dot: 'bg-rose-500' },
-  'Analytics & Visualization': { chip: 'bg-teal-50 text-teal-900', dot: 'bg-teal-500' },
-  'Web & Deployment': { chip: 'bg-orange-50 text-orange-900', dot: 'bg-orange-500' },
-  'Product & Tools': { chip: 'bg-amber-50 text-amber-900', dot: 'bg-amber-500' },
+  'Agents & LLMs': { chip: 'bg-periwinkle-soft text-periwinkle-deep', dot: 'bg-periwinkle' },
+  'Retrieval & Inference': { chip: 'bg-teal-soft text-teal-deep', dot: 'bg-teal' },
+  'Machine Learning': { chip: 'bg-sage-soft text-sage-deep', dot: 'bg-sage' },
+  'Backend & Deployment': { chip: 'bg-peach-soft text-peach-deep', dot: 'bg-peach' },
+  'Languages & Frontend': { chip: 'bg-mint-soft text-mint-deep', dot: 'bg-mint' },
+  'Customer & Delivery': { chip: 'bg-pink-soft text-pink-deep', dot: 'bg-pink' },
 }
 
 export default function Skills() {
@@ -22,7 +23,7 @@ export default function Skills() {
 
         <div className="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {skills.map((group) => {
-            const tint = categoryTints[group.category] ?? categoryTints.Programming
+            const tint = categoryTints[group.category] ?? categoryTints['Agents & LLMs']
             return (
               <div
                 key={group.category}

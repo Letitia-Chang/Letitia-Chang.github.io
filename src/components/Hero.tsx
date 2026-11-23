@@ -1,28 +1,33 @@
 import headshot from '../assets/headshot.jpg'
 import { site } from '../data/site'
 
-const stats = [
+// At-a-glance snapshot: where I am now and how I got here. Metrics live with their story in Experience.
+const snapshot = [
   {
-    value: '20+',
-    label: 'Products & Projects Developed',
+    when: 'Now',
+    title: 'AI Engineering Intern',
+    where: 'ATDC North Star AI Labs',
     soft: 'bg-periwinkle-soft',
     deep: 'text-periwinkle-deep',
   },
   {
-    value: '2',
-    label: 'Education Startups Led',
+    when: 'Now',
+    title: 'Agentic AI Research Intern',
+    where: 'Emory School of Medicine',
     soft: 'bg-peach-soft',
     deep: 'text-peach-deep',
   },
   {
-    value: '4+ Yrs',
-    label: 'Full-Time Tech Industry Experience',
+    when: '2021 — 2024',
+    title: 'Engineer → PM → Data Scientist',
+    where: 'Two startups in Taiwan',
     soft: 'bg-sage-soft',
     deep: 'text-sage-deep',
   },
   {
-    value: 'GenAI & Agents',
-    label: 'Multi-Step Workflows Shipped to Production',
+    when: 'Dec 2026',
+    title: 'M.S. Analytics, GPA 3.8',
+    where: 'Georgia Tech',
     soft: 'bg-pink-soft',
     deep: 'text-pink-deep',
   },
@@ -37,7 +42,7 @@ export default function Hero() {
             <div>
               <span className="inline-flex items-center gap-2 rounded-full bg-paper px-3.5 py-1.5 text-xs font-medium text-ink-soft">
                 <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-available" />
-                Available for Full-Time Roles Upon Graduation (December 2026)
+                Graduating Dec 2026 · Available Jan 2027
               </span>
               <h1 className="mt-6 font-display text-4xl font-semibold leading-[1.05] tracking-tight text-ink sm:text-5xl lg:text-6xl">
                 Ting-Ya Chang
@@ -96,18 +101,21 @@ export default function Hero() {
             />
             <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/55 to-transparent px-5 pb-4 pt-14">
               <p className="text-sm font-medium text-white">Atlanta, GA</p>
-              <p className="text-xs text-white/75">M.S. Analytics · Georgia Tech</p>
+              <p className="text-xs text-white/75">English · Mandarin · some Spanish</p>
             </div>
           </div>
 
           <div className="grid grid-cols-2 gap-4 md:col-span-2 md:grid-cols-4">
-            {stats.map((stat) => (
-              <div key={stat.value} className={`rounded-3xl p-5 ${stat.soft}`}>
-                <p className={`font-display text-2xl font-semibold leading-tight ${stat.deep}`}>
-                  {stat.value}
+            {snapshot.map((item) => (
+              <div key={item.title} className={`rounded-3xl p-5 ${item.soft}`}>
+                <p className={`text-xs font-semibold uppercase tracking-wider ${item.deep}`}>
+                  {item.when}
                 </p>
-                <p className={`mt-1 text-xs font-medium leading-snug ${stat.deep}`}>
-                  {stat.label}
+                <p className={`mt-2 font-display text-base font-semibold leading-snug ${item.deep}`}>
+                  {item.title}
+                </p>
+                <p className={`mt-1 text-xs font-medium leading-snug ${item.deep}`}>
+                  {item.where}
                 </p>
               </div>
             ))}

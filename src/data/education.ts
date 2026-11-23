@@ -10,12 +10,13 @@ export type Education = {
 export const education: Education[] = [
   {
     school: 'Georgia Institute of Technology',
-    degree: 'M.S. in Analytics (Computational Data Analytics track)',
+    degree: 'M.S. in Analytics (Computational Data Analytics track) · GPA 3.8',
     location: 'Atlanta, GA',
     period: 'Aug 2025 — Dec 2026',
     coursework: [
       'Machine Learning',
       'Deep Learning',
+      'Natural Language Processing',
       'Data and Visual Analytics',
       'High-Dimensional Data Analytics',
       'Operations Research (Optimization)',

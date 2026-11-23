@@ -1,4 +1,4 @@
-import { Microscope, Newspaper, Truck, LineChart, Code2, Cpu } from "lucide-react";
+import { Microscope, Newspaper, GraduationCap, LineChart, Code2, Cpu } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 import { experience } from "../data/experience";
 
@@ -6,9 +6,9 @@ import { experience } from "../data/experience";
 const roleIcons: Record<string, LucideIcon> = {
   "Agentic AI Research Intern": Microscope,
   "AI Engineering Intern": Newspaper,
-  "Data Science Practicum — UPS Surface Network Planning": Truck,
+  "Contract Consultant & Instructor": GraduationCap,
   "Data Scientist": LineChart,
-  "Full-Stack Developer & Technical Project Manager": Code2,
+  "Software Engineer & Technical Product Manager": Code2,
   "Junior Software Engineer": Cpu,
 };
 
@@ -22,14 +22,14 @@ const accentCycle: { soft: string; deep: string }[] = [
 
 export default function Experience() {
   return (
-    <section id="experience" className="bg-panel/60">
+    <section id="experience">
       <div className="mx-auto max-w-6xl px-6 py-16 md:py-24">
         <div className="max-w-2xl">
           <p className="text-sm font-semibold uppercase tracking-wider text-accent">
             Experience
           </p>
           <h2 className="mt-3 font-display text-3xl font-semibold tracking-tight text-ink sm:text-4xl">
-            Data, AI, product, and engineering roles
+            AI engineering, data science, and product roles
           </h2>
         </div>
 
@@ -64,11 +64,17 @@ export default function Experience() {
                     </div>
                     <span className="text-sm font-medium text-muted">
                       {job.period}
+                      {job.type && ` · ${job.type}`}
                     </span>
                   </div>
                   <p className={`mt-0.5 text-sm font-medium ${accent.deep}`}>
                     {job.org} · {job.location}
                   </p>
+                  {job.summary && (
+                    <p className="mt-3 text-sm leading-relaxed text-slate">
+                      {job.summary}
+                    </p>
+                  )}
 
                   <ul className="mt-4 space-y-2">
                     {job.bullets.map((bullet) => (

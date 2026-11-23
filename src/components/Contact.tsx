@@ -44,14 +44,14 @@ export default function Contact() {
     <section id="contact">
       <div className="mx-auto max-w-6xl px-6 py-16 md:py-24">
         <div className="rounded-3xl bg-ink px-6 py-14 text-center sm:px-12">
-          <p className="text-sm font-semibold uppercase tracking-wider text-indigo-300">
+          <p className="text-sm font-semibold uppercase tracking-wider text-periwinkle">
             Contact
           </p>
           <h2 className="mx-auto mt-3 max-w-xl font-display text-3xl font-semibold tracking-tight text-white sm:text-4xl">
             Let's talk about how I can help your team
           </h2>
           <p className="mx-auto mt-4 max-w-lg text-base leading-relaxed text-white/70">
-            Open to Data Scientist and AI/ML Engineer roles.
+            Open to Forward Deployed, Applied AI, and GenAI Engineer roles.
             <br />
             The fastest way to reach me is email.
           </p>
