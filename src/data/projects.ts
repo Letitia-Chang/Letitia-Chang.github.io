@@ -90,7 +90,7 @@ export const projects: Project[] = [
     pitch:
       'Models bird migration as a network from eBird observations and NASA nightlight data, then stress-tests whether removing light-polluted stopovers fragments it more than removing random ones.',
     tags: ['FastAPI', 'PostgreSQL', 'Network Analysis'],
-    demo: 'https://bird-migration-git-main-ting-ya.vercel.app/',
+    demo: 'https://bird-migration-tau.vercel.app/',
     github: 'https://github.com/Letitia-Chang/bird_migration',
     tier: 'grid',
     accent: 'mint',
