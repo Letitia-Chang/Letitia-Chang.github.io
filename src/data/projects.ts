@@ -95,15 +95,4 @@ export const projects: Project[] = [
     tier: 'grid',
     accent: 'mint',
   },
-  {
-    slug: 'content-generation-agent',
-    title: 'Content Generation Agent',
-    subtitle: 'Multi-step LLM pipeline',
-    pitch:
-      'Staged LLM pipeline taking raw intake to publish-ready, brand-voiced articles with a human review gate — the deployable twin of a production system at North Star AI Labs.',
-    tags: ['Claude API', 'Agents', 'Supabase', 'TypeScript'],
-    tier: 'grid',
-    accent: 'peach',
-    inProgress: true,
-  },
 ]
