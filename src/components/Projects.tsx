@@ -1,4 +1,4 @@
-import { Users, Flame, Bird } from 'lucide-react'
+import { Users, Flame, Bird, Newspaper, TreePine } from 'lucide-react'
 import type { LucideIcon } from 'lucide-react'
 import type { ReactNode } from 'react'
 import type { Project, Accent } from '../data/projects'
@@ -45,11 +45,13 @@ const spotlightVisuals: Record<string, ReactNode> = {
   'knowing-doing-gap': <MismatchChart />,
 }
 
-const gridSlugs = ['buzz-teammate-access', 'cerm', 'bird-migration']
+const gridSlugs = ['press-dossier', 'wifop', 'bird-migration', 'buzz-teammate-access', 'cerm']
 const gridIcons: Record<string, LucideIcon> = {
   'buzz-teammate-access': Users,
   cerm: Flame,
   'bird-migration': Bird,
+  'press-dossier': Newspaper,
+  wifop: TreePine,
 }
 
 const accents: Record<Accent, { soft: string; deep: string }> = {
