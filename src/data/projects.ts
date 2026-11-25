@@ -43,18 +43,18 @@ export const projects: Project[] = [
   },
   {
     slug: 'knowing-doing-gap',
-    title: 'Measuring the Knowing-Doing Gap in LLM Tool Use',
+    title: 'Tool-Use Knowing-Doing Gap Study',
     subtitle: 'Agent evaluation • Behavioral study + hidden-state probes',
     pitch:
-      'Does an LLM call tools when it actually needs them, and does it internally know when it needs one? An adaptation of Cheng et al. (arXiv:2605.14038) on Qwen2.5-7B-Instruct: a black-box behavioral study plus a hidden-state probing extension.',
-    tags: ['Qwen2.5-7B', 'Linear Probes', 'Tool Calling', 'LLM Evaluation', 'Hugging Face', 'Python'],
+      'Does an LLM call tools when it actually needs them, and is that need visible inside the model? An adaptation of a recent paper (Cheng et al., arXiv:2605.14038) on Qwen2.5-7B-Instruct: a behavioral study plus linear probes on hidden states.',
+    tags: ['Qwen2.5-7B', 'Linear Probes', 'PyTorch', 'Hugging Face', 'scikit-learn', 'LLM Evaluation'],
     detail: {
       problem:
         'Agents act on what a model does, not what it knows. A model that calls tools it doesn’t need wastes time and money; one that skips tools it does need gets answers wrong.',
       approach:
-        'Behavioral study: 30 curated questions, 10 no-tool runs each to label whether the model truly needs a tool, a confidence probe for what it believes, and an agentic probe for what it actually does. Extension: 1,000 questions run locally on a GPU, with nested-CV linear probes on every layer’s hidden states, shuffled-label and surface-feature controls.',
+        'Behavioral study: 30 questions, each answered 10 times without tools to label whether the model truly needs one, then compared with what it actually does. Extension: linear probes on hidden states over 982 questions, with nested cross-validation and shuffled-label and word-only baselines.',
       impact:
-        'Found a 50% mismatch between need and action, all from tool over-use; a one-line prompt intervention cut it to 27%. The probe decodes tool necessity at AUROC 0.90 (surface-feature baseline 0.78), and that internal signal barely moves (Spearman 0.98) while the same prompt change flips 348 tool calls: what the model encodes and what it does come apart.',
+        'In the 30-question run the model called tools on 28, including 15 of the 17 it could answer unaided. A rewritten system prompt cut the need/call mismatch from 50.0% to 26.7%, at a cost in accuracy (93.3% to 83.3%). Tool need is decodable on the 482 factual questions at AUROC 0.84, versus 0.66 from the words alone.',
     },
     github: 'https://github.com/Letitia-Chang/knowing-doing-gap',
     tier: 'spotlight',
@@ -65,7 +65,7 @@ export const projects: Project[] = [
     title: 'Press Dossier',
     subtitle: 'Open-source PR tool • Claude + Gmail drafts',
     pitch:
-      'Give it your company profile, and it builds dossiers on journalists who cover your space, scores how well each fits your company with clickable evidence, and drafts pitches you review and send yourself. Open-source version of the outreach platform I built at North Star AI Labs.',
+      'Give it your company profile, and it builds dossiers on journalists who cover your space, scores how well each fits your company with clickable evidence, and drafts pitches you review and send yourself. Open-source version of the outreach platform I built at ATDC.',
     tags: ['React', 'TypeScript', 'Express', 'PostgreSQL', 'Claude API', 'Gmail API'],
     demo: 'https://press-dossier.vercel.app',
     github: 'https://github.com/Letitia-Chang/journalist-dossiers',
@@ -111,7 +111,7 @@ export const projects: Project[] = [
     title: 'Bird Migration × Light Pollution',
     subtitle: 'Data & visual analytics',
     pitch:
-      'Models bird migration as a network from eBird observations and NASA nightlight data, then stress-tests whether removing light-polluted stopovers fragments it more than removing random ones.',
+      'Models bird migration as a network from eBird observations and NASA nightlight data, then stress-tests whether removing light-polluted stopovers fragments it more than removing random ones. They seem to, but the effect disappears against random sites with the same bird activity: bright sites are simply busy ones.',
     tags: ['FastAPI', 'PostgreSQL', 'Network Analysis'],
     demo: 'https://bird-migration-tau.vercel.app/',
     github: 'https://github.com/Letitia-Chang/bird_migration',

@@ -52,8 +52,7 @@ export default function About() {
             running product demos for universities. At an edtech startup serving
             7,500+ college students, I was a software engineer, then a product
             manager, then a data scientist. Now I'm finishing an M.S. in
-            Analytics at Georgia Tech and building AI agents at ATDC's North Star
-            AI Labs. I want to work close to the people using what I build, and
+            Analytics at Georgia Tech and building AI agents at ATDC. I want to work close to the people using what I build, and
             stay until it works.
           </p>
         </div>
