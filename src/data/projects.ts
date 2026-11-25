@@ -77,8 +77,8 @@ export const projects: Project[] = [
     title: 'WiFOP — Wildfire Outbreak Prediction',
     subtitle: 'Georgia Tech ML team project • Solo rework',
     pitch:
-      'Predicts next-day wildfire ignition on a 5 km California grid. After finding label leakage in our team’s pipeline, I rebuilt it solo (12.8M rows, 2020–2023): on a held-out 2023, flagging the riskiest 10% of cell-days catches 75% of fires.',
-    tags: ['CatBoost', 'XGBoost', 'Geospatial', 'SHAP', 'Python'],
+      'Predicts next-day wildfire ignition on a 5 km California grid. I found and fixed 4 data-leakage bugs in our 5-person team’s pipeline and rebuilt it solo (12.8M rows, 2020–2023); CatBoost reached 0.93 ROC-AUC on held-out 2023. Then I stress-tested my own result: a simple per-cell historical fire-rate baseline beat every model on PR-AUC (0.102 vs 0.084), so most of the skill was location, not weather.',
+    tags: ['CatBoost', 'XGBoost', 'Leakage Audit', 'Baselines & Ablation', 'Bootstrap CIs', 'Python'],
     github: 'https://github.com/Letitia-Chang/WiFOP',
     tier: 'grid',
     accent: 'peach',
