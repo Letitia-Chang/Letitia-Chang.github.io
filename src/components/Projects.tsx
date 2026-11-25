@@ -190,7 +190,7 @@ function CaseStudyPending() {
     <div className="rounded-3xl bg-paper p-7 shadow-sm ring-1 ring-line sm:p-9">
       <div className="flex flex-wrap items-center gap-2.5">
         <p className="text-xs font-semibold uppercase tracking-wider text-accent">
-          ATDC North Star AI Labs • Internal project
+          ATDC • Internal project
         </p>
         <span className="rounded-full bg-paper px-2.5 py-0.5 text-xs font-medium text-ink-soft">
           Case study coming soon

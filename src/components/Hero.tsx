@@ -6,7 +6,7 @@ const snapshot = [
   {
     when: 'Now',
     title: 'AI Engineering Intern',
-    where: 'ATDC North Star AI Labs',
+    where: 'ATDC',
     soft: 'bg-periwinkle-soft',
     deep: 'text-periwinkle-deep',
   },
