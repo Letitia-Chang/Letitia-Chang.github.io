@@ -44,21 +44,44 @@ export const projects: Project[] = [
   {
     slug: 'knowing-doing-gap',
     title: 'Measuring the Knowing-Doing Gap in LLM Tool Use',
-    subtitle: 'Agent evaluation • Behavioral study',
+    subtitle: 'Agent evaluation • Behavioral study + hidden-state probes',
     pitch:
-      'Does an LLM call tools when it actually needs them? A black-box behavioral adaptation of Cheng et al. (arXiv:2605.14038), run on Qwen2.5-7B-Instruct.',
-    tags: ['Qwen2.5-7B', 'Tool Calling', 'LLM Evaluation', 'TogetherAI', 'Python'],
+      'Does an LLM call tools when it actually needs them, and does it internally know when it needs one? An adaptation of Cheng et al. (arXiv:2605.14038) on Qwen2.5-7B-Instruct: a black-box behavioral study plus a hidden-state probing extension.',
+    tags: ['Qwen2.5-7B', 'Linear Probes', 'Tool Calling', 'LLM Evaluation', 'Hugging Face', 'Python'],
     detail: {
       problem:
         'Agents act on what a model does, not what it knows. A model that calls tools it doesn’t need wastes time and money; one that skips tools it does need gets answers wrong.',
       approach:
-        'Built a five-stage pipeline over 30 curated questions (15 arithmetic, 15 factual): 10 no-tool runs per question to label whether the model truly needs a tool, a confidence probe for what it believes, and an agentic probe for what it actually does.',
+        'Behavioral study: 30 curated questions, 10 no-tool runs each to label whether the model truly needs a tool, a confidence probe for what it believes, and an agentic probe for what it actually does. Extension: 1,000 questions run locally on a GPU, with nested-CV linear probes on every layer’s hidden states, shuffled-label and surface-feature controls.',
       impact:
-        'Found a 50% mismatch between need and action, all from tool over-use (tools called on 28 of 30 questions). A one-line prompt intervention cut the mismatch to 27%, at the cost of two questions flipping into tool under-use.',
+        'Found a 50% mismatch between need and action, all from tool over-use; a one-line prompt intervention cut it to 27%. The probe decodes tool necessity at AUROC 0.90 (surface-feature baseline 0.78), and that internal signal barely moves (Spearman 0.98) while the same prompt change flips 348 tool calls: what the model encodes and what it does come apart.',
     },
     github: 'https://github.com/Letitia-Chang/knowing-doing-gap',
     tier: 'spotlight',
     accent: 'teal',
+  },
+  {
+    slug: 'press-dossier',
+    title: 'Press Dossier',
+    subtitle: 'Open-source PR tool • Claude + Gmail drafts',
+    pitch:
+      'Give it your company profile, and it builds dossiers on journalists who cover your space, scores how well each fits your company with clickable evidence, and drafts pitches you review and send yourself. Open-source version of the outreach platform I built at North Star AI Labs.',
+    tags: ['React', 'TypeScript', 'Express', 'PostgreSQL', 'Claude API', 'Gmail API'],
+    demo: 'https://press-dossier.vercel.app',
+    github: 'https://github.com/Letitia-Chang/journalist-dossiers',
+    tier: 'grid',
+    accent: 'periwinkle',
+  },
+  {
+    slug: 'wifop',
+    title: 'WiFOP — Wildfire Outbreak Prediction',
+    subtitle: 'Georgia Tech ML team project • Solo rework',
+    pitch:
+      'Predicts next-day wildfire ignition on a 5 km California grid. After finding label leakage in our team’s pipeline, I rebuilt it solo (12.8M rows, 2020–2023): on a held-out 2023, flagging the riskiest 10% of cell-days catches 75% of fires.',
+    tags: ['CatBoost', 'XGBoost', 'Geospatial', 'SHAP', 'Python'],
+    github: 'https://github.com/Letitia-Chang/WiFOP',
+    tier: 'grid',
+    accent: 'peach',
   },
   {
     slug: 'buzz-teammate-access',
