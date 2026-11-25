@@ -44,17 +44,17 @@ export const projects: Project[] = [
   {
     slug: 'knowing-doing-gap',
     title: 'Tool-Use Knowing-Doing Gap Study',
-    subtitle: 'Agent evaluation • Behavioral study + hidden-state probes',
+    subtitle: 'LLM evaluation • Behavioral test + hidden-state probes',
     pitch:
-      'Does an LLM call tools when it actually needs them, and is that need visible inside the model? An adaptation of a recent paper (Cheng et al., arXiv:2605.14038) on Qwen2.5-7B-Instruct: a behavioral study plus linear probes on hidden states.',
-    tags: ['Qwen2.5-7B', 'Linear Probes', 'PyTorch', 'Hugging Face', 'scikit-learn', 'LLM Evaluation'],
+      'I adapted a recent paper’s setup (Cheng et al., arXiv:2605.14038) to study when an LLM calls tools it doesn’t need, first from its behavior and then from its hidden states. Qwen2.5-7B-Instruct.',
+    tags: ['Python', 'PyTorch', 'Hugging Face', 'scikit-learn', 'LLM Evaluation'],
     detail: {
       problem:
-        'Agents act on what a model does, not what it knows. A model that calls tools it doesn’t need wastes time and money; one that skips tools it does need gets answers wrong.',
+        'Does an LLM call tools when it needs them, and only then? If not, is the need visible inside the model?',
       approach:
-        'Behavioral study: 30 questions, each answered 10 times without tools to label whether the model truly needs one, then compared with what it actually does. Extension: linear probes on hidden states over 982 questions, with nested cross-validation and shuffled-label and word-only baselines.',
+        'A 30-question behavioral test, then linear probes on hidden states over 982 questions with nested cross-validation and word-only baselines.',
       impact:
-        'In the 30-question run the model called tools on 28, including 15 of the 17 it could answer unaided. A rewritten system prompt cut the need/call mismatch from 50.0% to 26.7%, at a cost in accuracy (93.3% to 83.3%). Tool need is decodable on the 482 factual questions at AUROC 0.84, versus 0.66 from the words alone.',
+        'Heavy over-use (28 of 30). Tool need is decodable on factual questions (AUROC 0.84 vs 0.66 from words). Across all questions the signal carries over to a different prompt (0.91 to 0.90), and that prompt mostly removed calls the probe scored as low-need. It also raised missed calls from 13 to 134. What I learned: my first labels had errors. I fixed them, with AI assistance, with rules and decisions set before rerunning, and the findings held. Limits: one model, one seed, AI-assisted label review, no causal test.',
     },
     github: 'https://github.com/Letitia-Chang/knowing-doing-gap',
     tier: 'spotlight',
