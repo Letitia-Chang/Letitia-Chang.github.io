@@ -31,7 +31,7 @@ export const experience: Experience[] = [
     period: 'Jul 2026 — Present',
     current: true,
     summary:
-      'Building the multimodal layer for SAGE, the lab’s LLM agent that generates and evaluates biomedical hypotheses.',
+      'Extending SAGE, the lab’s NeurIPS 2026 LLM agent that generates and evaluates biomedical hypotheses, with a multimodal patient-data layer.',
     bullets: [
       'Built a multimodal data pipeline for 411 TCGA bladder cancer patients across 9 data types, including 457 whole-slide images. Caught a legacy tiling tool silently reading slides at ~2.5x instead of 20x and removed it.',
       'Developed contrastive alignment (symmetric InfoNCE) linking slides, multi-omics and clinical text, reaching retrieval up to 16x better than random chance. 30 of 31 missing-modality combinations kept ≥70% of the full signal without retraining.',

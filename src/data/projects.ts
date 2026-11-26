@@ -63,13 +63,21 @@ export const projects: Project[] = [
   {
     slug: 'press-dossier',
     title: 'Press Dossier',
-    subtitle: 'Open-source PR tool • Claude + Gmail drafts',
+    subtitle: 'Open-source PR research tool • Live demo',
     pitch:
-      'Give it your company profile, and it builds dossiers on journalists who cover your space, scores how well each fits your company with clickable evidence, and drafts pitches you review and send yourself. Open-source version of the outreach platform I built at ATDC.',
+      'It helps a company find the right journalists, explains why each one fits, and drafts a pitch that a person always reviews and sends.',
     tags: ['React', 'TypeScript', 'Express', 'PostgreSQL', 'Claude API', 'Gmail API'],
+    detail: {
+      problem:
+        'PR pitches fail because they go to the wrong person with the wrong angle. Startups without a marketing specialist struggle to get news of a launch or a funding round to the people who should hear it.',
+      approach:
+        'One company profile feeds every AI step. Claude scores each journalist on configurable dimensions with a one-line reason, keeping only citations from that journalist’s recorded articles, then drafts a pitch into Gmail as a draft only: the app has no code that sends.',
+      impact:
+        'Made a public AI demo safe for anyone to use: each visitor gets a private copy of the data, live AI calls are rate-limited in Postgres, and inputs are capped. Over 190 server tests. A rate limit that passed its tests failed behind Cloudflare in production, which taught me to test through the real proxies. Scores are explainable, not yet validated.',
+    },
     demo: 'https://press-dossier.vercel.app',
     github: 'https://github.com/Letitia-Chang/journalist-dossiers',
-    tier: 'grid',
+    tier: 'spotlight',
     accent: 'periwinkle',
   },
   {
@@ -77,7 +85,7 @@ export const projects: Project[] = [
     title: 'WiFOP — Wildfire Outbreak Prediction',
     subtitle: 'Georgia Tech ML team project • Solo rework',
     pitch:
-      'Predicts next-day wildfire ignition on a 5 km California grid. I found and fixed 4 data-leakage bugs in our 5-person team’s pipeline and rebuilt it solo (12.8M rows, 2020–2023); CatBoost reached 0.93 ROC-AUC on held-out 2023. Then I stress-tested my own result: a simple per-cell historical fire-rate baseline beat every model on PR-AUC (0.102 vs 0.084), so most of the skill was location, not weather.',
+      'Predicts next-day wildfire ignition on a 5 km California grid. I rebuilt our 5-person team’s 26M-row pipeline, fixing 7 leakage and labeling bugs from a systematic audit, with regression tests in CI. The best model (weighted XGBoost) reached ROC-AUC 0.93 and PR-AUC 0.087 on held-out 2023, but a per-cell historical fire-rate baseline still won on PR-AUC (0.104): most of the skill is location, not timing.',
     tags: ['CatBoost', 'XGBoost', 'Leakage Audit', 'Baselines & Ablation', 'Bootstrap CIs', 'Python'],
     github: 'https://github.com/Letitia-Chang/WiFOP',
     tier: 'grid',

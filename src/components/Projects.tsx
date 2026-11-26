@@ -1,11 +1,16 @@
-import { Users, Flame, Bird, Newspaper, TreePine } from 'lucide-react'
+import { Users, Flame, Bird, TreePine } from 'lucide-react'
 import type { LucideIcon } from 'lucide-react'
 import type { ReactNode } from 'react'
 import type { Project, Accent } from '../data/projects'
 import { projects } from '../data/projects'
 import omniImg from '../assets/projects/omni.jpg'
+import pressImg from '../assets/projects/press-dossier.jpg'
 
 const spotlightImages: Record<string, { src: string; alt: string }> = {
+  'press-dossier': {
+    src: pressImg,
+    alt: 'Press Dossier dashboard with journalists, fit scores and recent outreach',
+  },
   'omni-retail-ai': {
     src: omniImg,
     alt: 'OmniRetail AI segment-first campaign explorer dashboard',
@@ -45,12 +50,11 @@ const spotlightVisuals: Record<string, ReactNode> = {
   'knowing-doing-gap': <MismatchChart />,
 }
 
-const gridSlugs = ['press-dossier', 'wifop', 'bird-migration', 'buzz-teammate-access', 'cerm']
+const gridSlugs = ['wifop', 'bird-migration', 'buzz-teammate-access', 'cerm']
 const gridIcons: Record<string, LucideIcon> = {
   'buzz-teammate-access': Users,
   cerm: Flame,
   'bird-migration': Bird,
-  'press-dossier': Newspaper,
   wifop: TreePine,
 }
 
@@ -303,7 +307,7 @@ export default function Projects() {
 
         <div className="mt-16 md:mt-20">
           <h3 className="font-display text-lg font-semibold text-ink">Notable projects</h3>
-          <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-3">
+          <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2">
             {gridProjects.map((project) => (
               <GridCard key={project.slug} project={project} />
             ))}
