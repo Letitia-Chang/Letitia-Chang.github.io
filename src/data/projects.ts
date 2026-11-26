@@ -73,7 +73,7 @@ export const projects: Project[] = [
       approach:
         'One company profile feeds every AI step. Claude scores each journalist on configurable dimensions with a one-line reason, keeping only citations from that journalist’s recorded articles, then drafts a pitch into Gmail as a draft only: the app has no code that sends.',
       impact:
-        'Made a public AI demo safe for anyone to use: each visitor gets a private copy of the data, live AI calls are rate-limited in Postgres, and inputs are capped. Over 190 server tests. A rate limit that passed its tests failed behind Cloudflare in production, which taught me to test through the real proxies. Scores are explainable, not yet validated. Built with AI coding tools; I designed the product and features and approved every merge.',
+        'Made a public AI demo safe for anyone to use: each visitor gets a private copy of the data, live AI calls are rate-limited in Postgres, and inputs are capped. Over 190 server tests. A rate limit that passed its tests failed behind Cloudflare in production, which taught me to test through the real proxies. Scores are explainable, not yet validated.',
     },
     demo: 'https://press-dossier.vercel.app',
     github: 'https://github.com/Letitia-Chang/journalist-dossiers',
