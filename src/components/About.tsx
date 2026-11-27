@@ -25,7 +25,7 @@ const pillars: Pillar[] = [
     deep: "text-green-deep",
   },
   {
-    title: "Product design",
+    title: "Customer-facing delivery",
     body: "Customer discovery, demos, and staff training: scoping what people actually need before building, then making sure they can use it.",
     icon: Layers,
     soft: "bg-yellow-soft",
@@ -52,8 +52,9 @@ export default function About() {
             running product demos for universities. At an edtech startup serving
             7,500+ college students, I was a software engineer, then a product
             manager, then a data scientist. Now I'm finishing an M.S. in
-            Analytics at Georgia Tech and building AI agents at ATDC. I want to work close to the people using what I build, and
-            stay until it works.
+            Analytics at Georgia Tech and building AI agents at ATDC. I work best on the client side:
+            demoing to buyers, scoping projects with clients, training the
+            people who use the tools, and shipping the fixes they ask for.
           </p>
         </div>
 

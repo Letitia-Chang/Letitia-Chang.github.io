@@ -17,40 +17,101 @@ const spotlightImages: Record<string, { src: string; alt: string }> = {
   },
 }
 
-// Results from the knowing-doing-gap repo (results/summary_metrics.csv), rounded as on LinkedIn.
-function MismatchChart() {
-  const bars = [
-    { label: 'Baseline', value: 50 },
-    { label: 'With prompt intervention', value: 27 },
-  ]
+// Approved numbers from the knowing-doing-gap agent brief (2026-11-25).
+function Bar({ label, value, display, strong }: { label: string; value: number; display: string; strong?: boolean }) {
   return (
-    <div className="flex aspect-[4/3] w-full flex-col justify-center bg-teal-soft p-8 sm:p-10">
-      <p className="text-xs font-semibold uppercase tracking-wider text-teal-deep">
-        Necessity–action mismatch
-      </p>
-      <p className="mt-1 text-sm text-teal-deep">Qwen2.5-7B-Instruct · 30 questions</p>
-      <div className="mt-8 space-y-6">
-        {bars.map((bar) => (
-          <div key={bar.label}>
-            <div className="flex items-baseline justify-between gap-4 text-sm font-medium text-teal-deep">
-              <span>{bar.label}</span>
-              <span className="font-display text-2xl font-semibold">{bar.value}%</span>
-            </div>
-            <div className="mt-2 h-3 rounded-full bg-paper/70">
-              <div className="h-3 rounded-full bg-teal" style={{ width: `${bar.value}%` }} />
-            </div>
-          </div>
-        ))}
+    <div>
+      <div className="flex items-baseline justify-between gap-4 text-sm font-medium text-teal-deep">
+        <span>{label}</span>
+        <span className="font-display text-xl font-semibold">{display}</span>
+      </div>
+      <div className="mt-1.5 h-2.5 rounded-full bg-paper/70">
+        <div
+          className={`h-2.5 rounded-full ${strong ? 'bg-teal' : 'bg-teal/45'}`}
+          style={{ width: `${value * 100}%` }}
+        />
       </div>
     </div>
   )
 }
 
-const spotlightVisuals: Record<string, ReactNode> = {
-  'knowing-doing-gap': <MismatchChart />,
+function KnowingDoingChart() {
+  return (
+    <div className="flex aspect-[4/3] w-full flex-col justify-center gap-7 bg-teal-soft p-7 sm:p-9">
+      <div>
+        <p className="text-xs font-semibold uppercase tracking-wider text-teal-deep">
+          Behavior · needed a tool vs called one
+        </p>
+        <p className="mt-0.5 text-xs text-teal-deep/80">Qwen2.5-7B-Instruct · 30 questions · mismatch</p>
+        <div className="mt-3 space-y-3">
+          <Bar label="Baseline prompt" value={0.5} display="50.0%" />
+          <Bar label="Rewritten system prompt" value={0.267} display="26.7%" strong />
+        </div>
+        <p className="mt-2 text-xs text-teal-deep/80">Cost: accuracy fell from 93.3% to 83.3%</p>
+      </div>
+      <div>
+        <p className="text-xs font-semibold uppercase tracking-wider text-teal-deep">
+          Hidden states · is tool need decodable?
+        </p>
+        <p className="mt-0.5 text-xs text-teal-deep/80">482 factual questions · AUROC</p>
+        <div className="mt-3 space-y-3">
+          <Bar label="Linear probe on hidden states" value={0.84} display="0.84" strong />
+          <Bar label="Words-only baseline" value={0.66} display="0.66" />
+        </div>
+      </div>
+    </div>
+  )
 }
 
-const gridSlugs = ['wifop', 'bird-migration', 'buzz-teammate-access', 'cerm']
+function WifopChart() {
+  return (
+    <div className="flex aspect-[4/3] w-full flex-col justify-center gap-6 bg-peach-soft p-7 sm:p-9">
+      <div>
+        <p className="text-xs font-semibold uppercase tracking-wider text-peach-deep">
+          PR-AUC on held-out 2023 · higher is better
+        </p>
+        <p className="mt-0.5 text-xs text-peach-deep/80">5 km California grid · 0.16% of cell-days had a fire</p>
+        <div className="mt-3 space-y-3">
+          {[
+            { label: 'Per-cell historical fire rate (baseline)', value: 0.104, strong: true },
+            { label: 'Weighted XGBoost (best of 5 models)', value: 0.087, strong: false },
+          ].map((bar) => (
+            <div key={bar.label}>
+              <div className="flex items-baseline justify-between gap-4 text-sm font-medium text-peach-deep">
+                <span>{bar.label}</span>
+                <span className="font-display text-xl font-semibold">{bar.value.toFixed(3)}</span>
+              </div>
+              <div className="mt-1.5 h-2.5 rounded-full bg-paper/70">
+                <div
+                  className={`h-2.5 rounded-full ${bar.strong ? 'bg-peach-deep/70' : 'bg-peach-deep/35'}`}
+                  style={{ width: `${(bar.value / 0.12) * 100}%` }}
+                />
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+      <div className="grid grid-cols-2 gap-3">
+        <div className="rounded-2xl bg-paper/70 p-4">
+          <p className="font-display text-2xl font-semibold text-peach-deep">0.93</p>
+          <p className="mt-1 text-xs text-peach-deep/80">XGBoost ROC-AUC</p>
+        </div>
+        <div className="rounded-2xl bg-paper/70 p-4">
+          <p className="font-display text-2xl font-semibold text-peach-deep">76%</p>
+          <p className="mt-1 text-xs text-peach-deep/80">of fires in its top 10% of cells</p>
+        </div>
+      </div>
+      <p className="-mt-2 text-xs text-peach-deep/80">Most of the skill is location, not weather.</p>
+    </div>
+  )
+}
+
+const spotlightVisuals: Record<string, ReactNode> = {
+  'knowing-doing-gap': <KnowingDoingChart />,
+  wifop: <WifopChart />,
+}
+
+const gridSlugs = ['buzz-teammate-access', 'cerm', 'bird-migration']
 const gridIcons: Record<string, LucideIcon> = {
   'buzz-teammate-access': Users,
   cerm: Flame,
@@ -190,35 +251,6 @@ function Spotlight({ project, index }: { project: Project; index: number }) {
   )
 }
 
-// City Bot is internal to ATDC: no code, demo, or case-study details until ATDC approves.
-function CaseStudyPending() {
-  return (
-    <div className="rounded-3xl bg-paper p-7 shadow-sm ring-1 ring-line sm:p-9">
-      <div className="flex flex-wrap items-center gap-2.5">
-        <p className="text-xs font-semibold uppercase tracking-wider text-accent">
-          ATDC • Internal project
-        </p>
-        <span className="rounded-full bg-paper px-2.5 py-0.5 text-xs font-medium text-ink-soft">
-          Case study coming soon
-        </span>
-      </div>
-      <h3 className="mt-2 font-display text-2xl font-semibold leading-snug text-ink">
-        City Bot — RAG assistant for Georgia founders
-      </h3>
-      <p className="mt-3 max-w-2xl text-sm leading-relaxed text-slate">
-        City Bot is internal to ATDC, so there is no code or demo to link. A code-free case
-        study covering the architecture, evaluation method, and results is on the way.
-      </p>
-      <a
-        href="#experience"
-        className="mt-4 inline-block text-sm font-medium text-accent underline-offset-4 hover:underline"
-      >
-        See City Bot’s results in Experience ↑
-      </a>
-    </div>
-  )
-}
-
 function GridCard({ project }: { project: Project }) {
   const accent = accents[project.accent]
   const Icon = gridIcons[project.slug]
@@ -302,12 +334,8 @@ export default function Projects() {
         </div>
 
         <div className="mt-16 md:mt-20">
-          <CaseStudyPending />
-        </div>
-
-        <div className="mt-16 md:mt-20">
           <h3 className="font-display text-lg font-semibold text-ink">Notable projects</h3>
-          <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2">
+          <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {gridProjects.map((project) => (
               <GridCard key={project.slug} project={project} />
             ))}
