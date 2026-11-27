@@ -30,6 +30,7 @@ export const skills: SkillGroup[] = [
       'NLP',
       'Recommender Systems',
       'A/B Testing',
+      'Tableau',
     ],
   },
   {
@@ -47,7 +48,6 @@ export const skills: SkillGroup[] = [
       'Stakeholder Management',
       'Technical Demos',
       'Staff Training',
-      'Tableau',
       'UX Thinking',
       'Product Requirements',
     ],

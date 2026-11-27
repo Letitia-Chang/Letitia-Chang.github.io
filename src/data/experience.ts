@@ -21,7 +21,7 @@ export const experience: Experience[] = [
       'Built and deployed City Bot, a RAG assistant in the Buzz team chat that answers Georgia founders’ licensing and registration questions from 234 government documents, citing an official source at every step (local Qwen3-14B, pgvector). Scored 38/38 on a regression suite and ~89% top-3 on a labeled retrieval set.',
       'Cut City Bot’s answer time from 40–180s to 6–13s by replacing a runaway LLM-driven tool loop (~48 calls) with a fixed pipeline. Chose Qwen3-14B over Qwen3.6-27B: 6.4s vs 12.2s per answer and 10.6 vs 19 GB of GPU memory, with the same test results.',
       'Built a multi-agent research system (LangGraph, SearXNG; Orchestrator → Searcher → Analyzer) with quota-guarded execution and a deterministic verifier that traces every claim to source text; 98.3% of claims matched exactly (226/230).',
-      'Built a journalist outreach platform with the lab’s outreach team (React, TypeScript, Express, PostgreSQL): profiles 300+ journalists, drafts Claude-generated pitches and routes replies with an LLM classifier. Opened 15+ journalist conversations, and open-sourced a generic version as Press Dossier.',
+      'Built a journalist outreach platform with the team’s outreach staff (React, TypeScript, Express, PostgreSQL): profiles 300+ journalists, drafts Claude-generated pitches and routes replies with an LLM classifier. Open-sourced a generic version as Press Dossier.',
     ],
   },
   {
