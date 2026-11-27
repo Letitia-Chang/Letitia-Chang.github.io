@@ -94,7 +94,7 @@ export const projects: Project[] = [
       impact:
         'ROC-AUC 0.93 on a held-out test set, measured against sampled non-purchases. Purchase-intent training pairs and inventory levels are synthetic, not real clickstream or inventory data, so the score validates the pipeline rather than live performance. Live demo deployed on Cloudflare Workers.',
     },
-    demo: 'https://tanstack-start-app.letitiachang0807-bb0.workers.dev/overview',
+    demo: 'https://omni-retail-ai.letitiachang0807-bb0.workers.dev/overview',
     github: 'https://github.com/Letitia-Chang/omni-retail-ai',
     tier: 'spotlight',
     accent: 'periwinkle',
