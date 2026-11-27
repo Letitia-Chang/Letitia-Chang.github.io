@@ -61,6 +61,25 @@ export const projects: Project[] = [
     accent: 'teal',
   },
   {
+    slug: 'wifop',
+    title: 'WiFOP — Wildfire Outbreak Prediction',
+    subtitle: 'Georgia Tech ML team project • Solo rework',
+    pitch:
+      'Predicts next-day wildfire ignition on a 5 km California grid, 2020–2023. After finding a label-leakage bug that had inflated our class results, I rebuilt the 5-person team’s 26M-row pipeline, fixing 7 leakage and labeling bugs with regression tests in CI. Then I tested my best model against a simple baseline, and the baseline won.',
+    tags: ['XGBoost', 'CatBoost', 'Leakage Audit', 'Spatial Validation', 'SHAP', 'Python'],
+    detail: {
+      problem:
+        'Our team’s original results looked strong, but a label-leakage bug had inflated them. How much real skill is there in predicting where a wildfire starts tomorrow?',
+      approach:
+        'Rebuilt the pipeline (NASA POWER weather, Landsat NDVI, NLCD land cover, WFIGS/IRWIN fire labels) after a systematic leakage audit, with regression tests in CI. Held out 2023 as the test year with spatial-block validation, trained 5 models, and evaluated them the way a fire agency would use them: top-k recall, lift, calibration, and SHAP.',
+      impact:
+        'Weighted XGBoost reached ROC-AUC 0.93 and PR-AUC 0.087 on held-out 2023 (0.16% base rate), catching 76% of fires in its top 10% of cells. A per-cell historical fire-rate baseline still won on PR-AUC (0.104): most of the skill is location, not weather. The lesson I keep: check a trivial baseline before trusting a model.',
+    },
+    github: 'https://github.com/Letitia-Chang/WiFOP',
+    tier: 'spotlight',
+    accent: 'peach',
+  },
+  {
     slug: 'omni-retail-ai',
     title: 'OmniRetail AI',
     subtitle: 'GenAI + ML system • Live demo',
@@ -90,17 +109,6 @@ export const projects: Project[] = [
     github: 'https://github.com/Letitia-Chang/buzz-agent-access',
     tier: 'grid',
     accent: 'sage',
-  },
-  {
-    slug: 'wifop',
-    title: 'WiFOP — Wildfire Outbreak Prediction',
-    subtitle: 'Georgia Tech ML team project • Solo rework',
-    pitch:
-      'Predicts next-day wildfire ignition on a 5 km California grid. I rebuilt our 5-person team’s 26M-row pipeline, fixing 7 leakage and labeling bugs from a systematic audit, with regression tests in CI. The best model (weighted XGBoost) reached ROC-AUC 0.93 and PR-AUC 0.087 on held-out 2023, but a per-cell historical fire-rate baseline still won on PR-AUC (0.104): most of the skill is location, not timing.',
-    tags: ['CatBoost', 'XGBoost', 'Leakage Audit', 'Baselines & Ablation', 'Bootstrap CIs', 'Python'],
-    github: 'https://github.com/Letitia-Chang/WiFOP',
-    tier: 'grid',
-    accent: 'peach',
   },
   {
     slug: 'cerm',
